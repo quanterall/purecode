@@ -1,0 +1,356 @@
+.landing-v2-speaker-area {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  .section-title-v4 {
+    h2,
+    p {
+      color: var(--white-txt);
+    }
+  }
+  &::before {
+    content: url("../img/speakers/ComputerHeadGuy.png");
+    position: absolute;
+    bottom: -7px;
+    right: 5vw;
+    z-index: 0;
+  }
+}
+
+.landing-v2-speaker-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 60px 130px;
+}
+
+// .landing-v2-single-speaker {
+//   &:hover {
+//     .landing-v2-speaker-thumb {
+//       .thumb {
+//         &::before {
+//           opacity: 0.85;
+//           visibility: visible;
+//         }
+//       }
+//       .shape-1 {
+//         img,
+//         svg {
+//           path {
+//             fill: var(--sky-blue-bg);
+//           }
+//         }
+//       }
+//       .shape-2,
+//       .shape-3 {
+//         transform: translate(0);
+//         opacity: 1;
+//       }
+//       .social {
+//         ul {
+//           li {
+//             &:nth-child(1),
+//             &:nth-child(2),
+//             &:nth-child(3) {
+//               opacity: 1;
+//               transform: translateX(0px);
+//             }
+//           }
+//         }
+//       }
+//     }
+//     .landing-v2-speaker-title {
+//       a {
+//         color: var(--sky-blue-txt);
+//       }
+//       span {
+//         color: var(--sky-blue-txt);
+//       }
+//     }
+//   }
+// }
+
+.landing-v2-speaker-thumb {
+  position: relative;
+  // max-width: 285px;
+  // max-height: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  .thumb {
+    position: relative;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+      transform: rotate(-180deg);
+      background: var(--landing-v2-about-overlay);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1;
+      transition: all 0.3s ease-in-out;
+    }
+    img {
+      clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    }
+  }
+  .shape-1,
+  .shape-2,
+  .shape-3 {
+    position: absolute;
+    z-index: -1;
+  }
+  .shape-1 {
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img,
+    svg {
+      path {
+        fill: var(--sky-blue-bg);
+      }
+      max-width: 100%;
+      max-height: 100%;
+      path {
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  // .shape-2,
+  // .shape-3 {
+  //   opacity: 0;
+  //   transition: all 0.3s ease-in-out;
+  // }
+  // .shape-2 {
+  //   top: 40px;
+  //   right: -30px;
+  //   transform: translateX(-45px) translateY(20px);
+  // }
+  // .shape-3 {
+  //   bottom: 55px;
+  //   left: -15px;
+  //   transform: translateX(30px) translateY(-25px);
+  // }
+
+  // .social {
+  //   position: absolute;
+  //   width: 100%;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   z-index: 99;
+  //   ul {
+  //     display: flex;
+  //     justify-content: center;
+  //     li {
+  //       &:nth-child(1) {
+  //         transition: all 0.3s ease-in-out;
+  //         transition-delay: 0.2s !important;
+  //         opacity: 0;
+  //         transform: translateX(20px);
+  //       }
+  //       &:nth-child(2) {
+  //         transition: all 0.3s ease-in-out;
+  //         transition-delay: 0.1s !important;
+  //         opacity: 0;
+  //       }
+  //       &:nth-child(3) {
+  //         transition: all 0.3s ease-in-out;
+  //         transition-delay: 0.2s !important;
+  //         opacity: 0;
+  //         transform: translateX(-20px);
+  //       }
+  //       a {
+  //         display: flex;
+  //         align-items: center;
+  //         justify-content: center;
+  //         width: 34px;
+  //         height: 34px;
+  //         border: 1px solid var(--white-bdr);
+  //         color: var(--white-txt);
+  //         border-radius: 50%;
+  //         margin: 0px 10px;
+  //         font-size: 16px;
+  //         line-height: 1;
+  //         transition: all 0.4s ease-in-out;
+  //         &:hover {
+  //           background-color: var(--sky-blue-txt);
+  //           border-color: transparent;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+.landing-v2-speaker-title {
+  margin-top: 20px;
+  text-align: center;
+  h6 {
+    font-family: "Montserrat";
+    font-size: 1.5625rem; //25px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--white-txt);
+    margin-bottom: 5px;
+    // transition: all 0.3s ease-in-out;
+  }
+  p {
+    font-size: 0.875rem; //14px;
+    color: var(--white-txt);
+  }
+}
+
+.speakers-form {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  &:before {
+    content: url("../img/speakers/EricssonMobile.png");
+    position: absolute;
+    bottom: -8px;
+    left: 15vw;
+    z-index: 0;
+  }
+  &:after {
+    content: url("../img/speakers/Heart-message.png");
+    position: absolute;
+    bottom: 380px;
+    left: calc(15vw + 70px);
+    z-index: 0;
+  }
+  .section-title-v4 {
+    margin-bottom: 80px;
+  }
+  #mlb2-5837220.ml-form-embedContainer
+    .ml-form-embedWrapper
+    .ml-form-embedBody
+    .ml-form-embedContent,
+  #mlb2-5837220.ml-form-embedContainer
+    .ml-form-embedWrapper
+    .ml-form-successBody
+    .ml-form-successContent {
+    margin: 0 !important;
+  }
+  #mlb2-5837220.ml-form-embedContainer
+    .ml-form-embedWrapper
+    .ml-form-embedBody
+    .ml-form-embedContent
+    p,
+  #mlb2-5837220.ml-form-embedContainer
+    .ml-form-embedWrapper
+    .ml-form-successBody
+    .ml-form-successContent
+    p {
+    display: none;
+  }
+
+  #mlb2-5837220.ml-form-embedContainer
+    .ml-form-embedWrapper
+    .ml-form-embedBody
+    .ml-form-fieldRow
+    input,
+  #mlb2-5837220.ml-form-embedContainer
+    .ml-form-embedWrapper
+    .ml-form-embedBody
+    .ml-form-fieldRow
+    textarea,
+  #mlb2-5837220.ml-form-embedContainer
+    .ml-form-embedWrapper
+    .ml-form-embedBody
+    .ml-form-horizontalRow
+    textarea {
+    border-radius: 10px !important;
+    font-size: 12px !important;
+  }
+  #mlb2-5837220.ml-form-embedContainer
+    .ml-form-embedWrapper
+    .ml-form-embedBody
+    .ml-form-embedSubmit
+    button {
+    background-color: #00c1c9 !important;
+    transition: background-color 0.3s ease-in-out;
+    font-family: "Baloo Da 2", sans-serif !important;
+    font-size: 20px !important;
+    padding: 15px 25px 14px 25px !important;
+    width: auto !important;
+    border-radius: 10px !important;
+    &:hover,
+    &:focus {
+      background-color: #245359 !important;
+    }
+  }
+}
+
+// Responsive
+@media screen and (max-width: 1299px) {
+  .landing-v2-speaker-area {
+    &::before {
+      transform: scale(80%);
+      right: -7vw;
+      bottom: -52px;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .landing-v2-speaker-wrapper {
+    // grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+    // padding: 0px 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .landing-v2-speaker-area {
+    .shape-01 {
+      max-width: 100px;
+    }
+    .shape-02 {
+      top: 5%;
+    }
+    &::before {
+      content: none;
+    }
+  }
+  .landing-v2-speaker-wrapper {
+    padding: 0px 20px;
+  }
+  .landing-v2-speaker-title {
+    // margin-top: 15px;
+    h6 {
+      font-size: 1.125rem; //18px;
+    }
+    p {
+      // font-size: 14px;
+    }
+  }
+  .landing-v2-speaker-thumb {
+    .shape-2 {
+      top: 50px;
+      right: -15px;
+      max-width: 90px;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .landing-v2-speaker-area {
+    .shape-04 {
+      display: none;
+    }
+  }
+  .landing-v2-speaker-wrapper {
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    grid-gap: 30px;
+  }
+}

@@ -1,0 +1,262 @@
+/* Placeholder */
+
+*::-moz-placeholder {
+    color: var(--body-color);
+    opacity: 1;
+}
+
+*::placeholder {
+    color: var(--body-color);
+    opacity: 1;
+}
+
+// Common Padding
+
+.py-100 {
+    padding: 100px 0px;
+}
+.py-50 {
+    padding: 50px 0px;
+}
+.pt-100 {
+    padding-top: 100px;
+}
+.pb-100 {
+    padding-bottom: 100px;
+}
+.py-70 {
+    padding: 70px 0px;
+}
+.pb-50 { 
+    padding-bottom: 50px;
+}
+.pt-50 {
+    padding-top: 50px;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.m-0 {
+    margin: 0;
+}
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
+// Section Padding 
+.s-py-100 {
+    padding: 100px 0px;
+}
+.s-py-50 {
+    padding: 50px 0px;
+}
+.s-py-t-100-b-50 {
+    padding: 100px 0px 50px 0px;
+}
+.s-py-t-50-b-100 {
+    padding: 50px 0px 100px 0px;
+}
+.s-pt-50 {
+    padding-top: 50px;
+}
+.s-pb-50 {
+    padding-bottom: 50px;
+}
+.s-pt-100 {
+    padding-top: 100px;
+}
+.s-pb-100 {
+    padding-bottom: 100px;
+}
+.s-py-70 {
+    padding: 70px 0px;
+}
+
+
+
+// Background color
+.bg-snow {
+    background: var(--snow-bg);
+}
+.bg-dark {
+    background: var(--font-clr-bg) !important;
+}
+.blue-bg-1 {
+    background-color: var(--landing-v2-section-bg-1);
+}
+.blue-bg-2 {
+    background-color: var(--landing-v2-section-bg-2);
+}
+
+
+
+
+
+// ========= keyframes =======
+
+@keyframes trangle {
+    from {
+        transform: scale(1);
+        transition: all .5s ease-in-out;
+    }
+    to {
+        transform: scale(1.5);
+        opacity: 0;
+        
+    }
+}
+// Play Button
+@keyframes play_button {
+    0%{
+       transform: scale(.5);
+    }
+    50%{
+       opacity: .5;
+    }
+    100%{
+       transform: scale(2.5);
+       opacity: 0;
+    }
+}
+// Icon Rotate
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+    from {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+// Responsive 
+@media screen and (max-width: 1199px) {
+    .mb-xl-20 {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .py-lg-70 {
+        padding: 70px 0px;
+    }
+    .py-lg-35 {
+        padding: 35px 0px;
+    }
+    .pt-lg-70 {
+        padding-top: 70px;
+    }
+    .pb-lg-70 {
+        padding-bottom: 70px;
+    }
+    .pb-lg-35 { 
+        padding-bottom: 35px;
+    }
+    .mb-lg-20 {
+        margin-bottom: 20px !important;
+    }
+    .mb-lg-30 {
+        margin-bottom: 30px !important;
+    }
+    // Section Padding 
+    .s-py-100 {
+        padding: 70px 0px;
+    }
+    .s-py-50 {
+        padding: 35px 0px;
+    }
+    .s-py-t-100-b-50 {
+        padding: 70px 0px 35px 0px;
+    }
+    .s-py-t-50-b-100 {
+        padding: 35px 0px 70px 0px;
+    }
+    .s-pt-50 {
+        padding-top: 35px;
+    }
+    .s-pb-50 {
+        padding-bottom: 35px;
+    }
+    .s-pt-100 {
+        padding-top: 70px;
+    }
+    .s-pb-100 {
+        padding-bottom: 70px;
+    }
+
+
+    
+}
+@media screen and (max-width: 767px) {
+    .py-md-50 {
+        padding: 50px 0px;
+    }
+    .py-md-25 {
+        padding: 25px 0px;
+    }
+    .pt-md-50 {
+        padding-top: 50px;
+    }
+    .pb-md-50 {
+        padding-bottom: 50px;
+    }
+    .pb-md-25 { 
+        padding-bottom: 25px;
+    }
+    .py-md-40 {
+        padding: 40px 0px;
+    }
+    .mb-md-20 {
+        margin-bottom: 20px !important;
+    }
+    .pt-lg-30 {
+        padding-top: 30px;
+    }
+    
+    // Section Padding 
+    .s-py-100 {
+        padding: 50px 0px;
+    }
+    .s-pt-50 {
+        padding-top: 25px;
+    }
+    .s-py-50 {
+        padding: 25px 0px;
+    }
+    .s-py-t-100-b-50 {
+        padding: 50px 0px 25px 0px;
+    }
+    .s-py-t-50-b-100 {
+        padding: 25px 0px 50px 0px;
+    }
+    .s-pb-50 {
+        padding-bottom: 25px;
+    }
+    .s-pt-100 {
+        padding-top: 50px;
+    }
+    .s-py-70 {
+        padding: 50px 0px;
+    }
+    .s-pb-100 {
+        padding-bottom: 50px;
+    }
+
+}
+@media screen and (max-width: 575px) {
+    .d-sm-none {
+        display: none;  
+    }
+    .mb-sm-20 {
+        margin-bottom: 20px;
+    }
+}

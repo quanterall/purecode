@@ -1,0 +1,91 @@
+<section class="landing-v2-speaker-area s-py-100" id="speakers-section" style="background-image: url('assets/img/speakers/Speakers-background.png');">
+    <div class="container">
+        <div class="section-title-v4">
+            <h2>purecode SPEAKERS</h2>
+            <p>Meet the lecturers</p>
+        </div>
+        <div class="landing-v2-speaker-wrapper">
+         {% set speakers = {
+            'speaker-1': {
+                'delay': '10',
+                'imgPath': 'RickardAndersson.png',
+                'name': 'Rickard Andersson',
+                'title': 'Software Developer at Quanterall',
+                'github': "",
+                'linkedIn': "",
+                'twitter': "",
+
+            },     
+            'speaker-2': {
+                'delay': '100',
+                'imgPath': 'FilipHaglund.png',
+                'name': 'Filip Haglund',
+                'title': 'Software Developer at Quanterall',
+                'github': "",
+                'linkedIn': "https://www.linkedin.com/in/filip-haglund/",
+                'twitter': "",
+
+            },     
+            'speaker-3': {
+                'delay': '200',
+                'imgPath': 'DimitarIvanov.png',
+                'name': 'Dimitar Ivanov',
+                'title': 'Core Developer, æternity Crypto Foundation',
+                'github': "",
+                'linkedIn': "",
+                'twitter': "",
+
+            },     
+            'speaker-4': {
+                'delay': '300',
+                'imgPath': 'GeorgiSpasov.png',
+                'name': 'Georgi Spasov',
+                'title': 'Software Developer at Quanterall',
+                'github': "",
+                'linkedIn': "",
+                'twitter': "",
+
+            },     
+            'speaker-5': {
+                'delay': '400',
+                'imgPath': 'HristoKoshev.png',
+                'name': 'Hristo Koshev',
+                'title': 'Software Developer at Quanterall',
+                'github': "",
+                'linkedIn': "",
+                'twitter': "",
+
+            },     
+        } %}
+            {% for speaker in speakers %}
+            <article class="landing-v2-single-speaker" data-aos="fade-up" data-aos-delay={{ speaker.delay }}>
+                <section class="landing-v2-speaker-thumb">
+                    <div class="thumb">
+                        <img src="assets/img/speakers/{{ speaker.imgPath }}" alt="speaker">
+                    </div>
+                     <div class="shape-1">
+                        <img src="assets/img/speakers/shapes/shape-01.svg" alt="shape">
+                    </div>
+                   {# <div class="shape-2">
+                        <img src="assets/img/speakers/shapes/big-cercle.png" alt="shape">
+                    </div>
+                    <div class="shape-3">
+                        <img src="assets/img/speakers/shapes/small-cercle.png" alt="shape">
+                    </div> #}
+                    {# <div class="social">
+                        <ul>
+                            <li><a href={{ speaker.github }} target="_blank"><i class="icofont-github"></i></a></li>
+                            <li><a href={{ speaker.twitter }} target="_blank"><i class="icofont-twitter"></i></a></li>
+                            <li><a href={{ speaker.linkedIn }} target="_blank"><i class="icofont-linkedin"></i></a></li>
+                        </ul>
+                    </div> #}
+                </section>
+                <section class="landing-v2-speaker-title">
+                    <h6>{{ speaker.name }}</h6>
+                    <p>{{speaker.title}}</p>
+                </section>
+            </article>
+            {% endfor %} 
+        </div>
+    </div>
+</section>

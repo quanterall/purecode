@@ -1,0 +1,119 @@
+.header-general {
+  background-color: var(--white-bg);
+  backdrop-filter: blur(50px);
+  position: relative;
+  z-index: 99999999;
+  .header-general-wrapper {
+    .logo {
+      margin-right: 70px;
+      a {
+        font-family: "Baloo Da 2";
+        color: var(--body-clr-txt);
+        font-size: 2.5625rem; //41px
+        line-height: 1;
+        span {
+          font-weight: normal;
+          color: var(--sky-blue-txt);
+        }
+        .bold {
+          font-weight: 700;
+          color: var(--body-clr-txt);
+        }
+      }
+    }
+    .header-wrap {
+      width: 100%;
+      background-color: transparent;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 0;
+      justify-content: flex-end;
+      //   margin-right: 5em;
+      .main-menu {
+        ul {
+          li {
+            a {
+              &::before {
+                background: var(--primary-bg);
+              }
+            }
+          }
+        }
+      }
+      .header-right {
+        .btn {
+          padding: 12px 60px 10px;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media screen and (max-width: 1250px) {
+  .header-general {
+    .header-general-wrapper {
+      .logo {
+        margin-right: 15px;
+      }
+      .header-wrap {
+        justify-content: flex-end;
+        .header-right {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header-general {
+    .header-general-wrapper {
+      .header-wrap {
+        .main-menu {
+          ul {
+            li {
+              .sub-menu {
+                background: transparent;
+                backdrop-filter: unset;
+                li {
+                  a {
+                    color: var(--font-clr-txt);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .general-mega-menu {
+        background: transparent;
+        backdrop-filter: unset;
+        .single-menu {
+          .title {
+            h6 {
+              color: var(--font-clr-txt);
+            }
+          }
+          .menu {
+            ul {
+              li {
+                a {
+                  color: var(--font-clr-txt);
+                  &:hover {
+                    transform: translateX(0px);
+                    background: var(--gradient-secondary);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.faq-v1-area {
+  position: relative;
+
+  .section-title-v4 {
+    margin-bottom: 75px;
+  }
+}
+
+.faq-v1-wrapper {
+  // max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.single-faq {
+  margin-bottom: 1.25em;
+  background: #eaeaea;
+  padding: 2.2em 2em 2em 4em;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: var(--gradient-secondary);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &.active {
+    background: #ffffff;
+    box-shadow: 0px 0px 20px var(--faq-shadow);
+    &::before {
+      opacity: 1;
+    }
+    .faq-head {
+      h6 {
+        i {
+          //   background: var(--body-clr-txt);
+          //   -webkit-background-clip: text;
+          //   -webkit-text-fill-color: transparent;
+          transform: rotateX(-180deg) rotateY(0deg);
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+.faq-head {
+  cursor: pointer;
+  h6 {
+    font-family: "Montserrat";
+    font-size: 1.25rem; //20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+      transition: all 0.35s ease-in-out;
+      transform: rotate(0deg);
+      margin-left: 20px;
+      &::before {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+.faq-body {
+  display: none;
+  margin-top: 2em;
+  //   max-width: 510px;
+  p {
+    font-size: 1rem;
+  }
+}
+
+// Responsive
+@media screen and(max-width: 1199px) {
+  .single-faq {
+    padding: 2.2em 1.25em 2em 2em;
+  }
+}
+@media screen and(max-width: 991px) {
+  .faq-v1-area {
+    .section-title-v4 {
+      margin-bottom: 50px;
+    }
+  }
+  .faq-v1-wrapper {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    max-width: 75%;
+  }
+}
+@media screen and(max-width: 575px) {
+  .faq-v1-wrapper {
+    max-width: none;
+  }
+  .single-faq {
+    // margin-bottom: 20px;
+    padding: 1.25em 1em 1.25em 1.25em;
+    &::before {
+      width: 2px;
+    }
+  }
+  .faq-head {
+    h6 {
+      font-size: 1rem;
+      i:before {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .faq-body {
+    margin-top: 1em;
+  }
+}

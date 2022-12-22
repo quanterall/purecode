@@ -1,0 +1,96 @@
+button {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+.btn {
+  font-size: 1.25rem; //20px;
+  font-family: "Baloo Da 2";
+  font-weight: 500;
+  //   line-height: 1;
+  color: var(--white-txt);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5em;
+  background: var(--font-clr-bg);
+  transition: var(--ease-in-out);
+  position: relative;
+  z-index: 9;
+
+  &:hover {
+    background-color: var(--dark-btn-hvr-bg);
+    color: #fff;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+  i {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+}
+
+// Button Speacing Here
+.btn-lg-space {
+  padding: 15px 30px;
+}
+.btn-md-space {
+  padding: 15px 20px;
+}
+.btn-sm-space {
+  padding: 12px 20px;
+}
+
+// Buton Txt Color Here
+.btn-txt-dark {
+  color: var(--font-clr-txt);
+}
+.btn-txt-whit {
+  color: var(--white-txt);
+}
+
+// Button Bg Here
+.btn-bg-dark {
+  background-color: var(--font-clr-bg);
+}
+.btn-bg-g-primary {
+  background: var(--gradient-primary-btn);
+  background-size: 200%;
+  &:hover {
+    background-position: right;
+  }
+}
+.btn-bg-g-secondary {
+  background: var(--gradient-secondary-btn);
+  background-size: 200%;
+  background-position: right;
+  &:hover {
+    background-position: left;
+  }
+}
+
+.b-r-0 {
+  border-radius: 0;
+}
+
+// Responsive
+
+@media screen and (max-width: 767px) {
+  .btn-lg-space {
+    padding: 13px 25px;
+  }
+  .btn {
+    font-size: 16px;
+  }
+  .btn-md-space {
+    padding: 12px 15px;
+  }
+}

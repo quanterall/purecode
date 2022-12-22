@@ -1,0 +1,241 @@
+//font familly variable
+:root {
+  --roboto: "Roboto", sans-serif;
+  --montserrat: "Montserrat", sans-serif;
+  --baloo: "Baloo Da 2", sans-serif;
+}
+
+//font weight variable
+:root {
+  --black-bold: 900;
+  --extra-bold: 800;
+  --bold: 700;
+  --semi-bold: 600;
+  --medium: 500;
+  --light: 300;
+  --regular: 400;
+}
+
+// data-theme dark light version colors
+// :root {}
+
+:root {
+  // --theme-color: #21BDF6;
+
+  // ========= Color ============
+  --body-clr-txt: #245359;
+  --font-clr-txt: #245359;
+  --black-txt: #000;
+  --white-txt: #fff;
+  --gainsboro-txt: #dadada;
+  --snow-txt: #f9f9f9;
+  --sky-blue-txt: #00c1c9;
+  --radical-red-txt: #ff175c;
+  --primary-txt: #223fdc;
+  --number-color: rgba(0, 0, 0, 0.02);
+  --general-menu-a-color: rgba(255, 255, 255, 0.6);
+  --texas-color: rgba(0, 133, 255, 0.4);
+
+  // ========= Background ============
+  --body-clr-bg: #555555;
+  --font-clr-bg: #152535;
+  --black-bg: #000;
+  --white-bg: #fff;
+  --gainsboro-bg: #dadada;
+  --snow-bg: #f9f9f9;
+  --primary-bg: #245359;
+  --radical-red-bg: #ff175c;
+  --warning-bg: #ffa100;
+  --sky-blue-bg: #00c1c9;
+  --w-light: #fafafa;
+
+  --dark-btn-hvr-bg: #031120;
+  --general-search-input-bg: rgba(255, 255, 255, 0.2);
+  --foter-with-shape-bg: #01022c;
+  --counter-dot: #0c104e;
+  --gallery-v1-img-bg: #010910;
+  --share-idea-v2-bg: #fdfdfd;
+  --share-idea-v2-shape-bg: #f9f9fc;
+  --pricing-tbl-item-bg: #f9f9f9;
+  --faq-bg: rgba(218, 218, 218, 0.15);
+  --section-title-v2-span-clr: rgba(21, 37, 53, 0.02);
+
+  // ========= Border ============
+  --body-clr-bdr: #555555;
+  --font-clr-bdr: #152535;
+  --black-bdr: #000;
+  --white-bdr: #fff;
+  --gainsboro-bdr: #dadada;
+  --snow-bdr: #f9f9f9;
+  --primary-bdr: #223fdc;
+  --radical-red-bdr: #ff175c;
+  --warning-bdr: #ffa100;
+  --whisper-bdr: #eeeeee;
+  --sky-blue-bdr: #00c2ff;
+  --news-v1-border: rgba(255, 23, 92, 0.15);
+
+  // ========= RGB ============
+  //   --mega-menu-bg: rgba(255, 255, 255, 0.7);
+  //   --transprent-megamenu-bg: rgba(0, 22, 147, 0.7);
+  //   --transprent-hdr-search-bg: rgba(21, 37, 53, 0.7);
+  //   --subscribe-input-bg: rgba(255, 255, 255, 0.1);
+
+  //   --popup-vdo-icn-bg: rgba(0, 3, 17, 0.3);
+  //   --visitor-image-bg: rgba(21, 37, 53, 0.8);
+  --faq-shadow: rgba(0, 0, 0, 0.1);
+  --v1-color: rgba(0, 0, 0, 0.02);
+
+  // ========= Gradient ============
+  --gradient-primary: linear-gradient(
+    53.28deg,
+    hsla(182, 100%, 39%, 1),
+    4.8%,
+    hsla(187, 42%, 25%, 1) 86.91%
+  );
+  --gradient-secondary: linear-gradient(
+    53.28deg,
+    hsla(182, 100%, 39%, 1) 4.8%,
+    hsla(187, 42%, 25%, 1) 86.91%
+  );
+
+  //   --general-submenu-bg: linear-gradient(
+  //     0deg,
+  //     #ff6b17 0%,
+  //     rgba(255, 23, 92, 0) 100%
+  //   );
+  //   --general-megamenu-bg: linear-gradient(
+  //     53.28deg,
+  //     rgba(255, 161, 0, 0.8) 4.8%,
+  //     rgba(255, 23, 92, 0.8) 86.91%
+  //   );
+  //   --transprent-submenu-bg: linear-gradient(
+  //     0deg,
+  //     #0085ff 0%,
+  //     rgba(0, 27, 173, 0) 100%
+  //   );
+
+  //   --about-socail-bg: linear-gradient(
+  //     189.76deg,
+  //     #ff175c 7.34%,
+  //     rgba(255, 23, 92, 0) 69.75%
+  //   );
+  //   --news-hover: linear-gradient(
+  //     53.28deg,
+  //     rgba(255, 161, 0, 0.03) 4.8%,
+  //     rgba(255, 23, 92, 0.03) 86.91%
+  //   );
+  //   --inner-page-v1-register-from-bg: linear-gradient(
+  //     53.28deg,
+  //     rgba(255, 161, 0, 0.7) 4.8%,
+  //     rgba(255, 23, 92, 0.7) 86.91%
+  //   );
+  //   --landing-gallery-overlay: linear-gradient(
+  //     0deg,
+  //     #ff6b17 0%,
+  //     rgba(255, 23, 92, 0) 100%
+  //   );
+
+  // ========= Button Gradient ===========
+  --gradient-primary-btn: linear-gradient(to right, #ff175c, #223fdc, #ff175c);
+  --gradient-secondary-btn: linear-gradient(
+    to right,
+    hsla(187, 42%, 25%, 1),
+    hsla(182, 100%, 39%, 1),
+    hsla(187, 42%, 25%, 1)
+  );
+
+  // ========= Shadow ============
+  --header-v1-sdo: rgba(0, 0, 0, 0.05);
+
+  // Blue Theme Color
+  --landing-v2-hero-bg: #001bad;
+  --landing-v2-section-bg-1: #001693;
+  --landing-v2-section-bg-2: #011583;
+  --landing-v2-about-overlay: linear-gradient(
+    180deg,
+    hsla(182, 100%, 39%, 1) 0%,
+    rgba(0, 27, 173, 0) 100%
+  );
+  --l-schedule-btn-bg: linear-gradient(
+    55.1deg,
+    #223fdc -11.85%,
+    #ff175c 124.23%
+  );
+  --nav-button-bg: #001693;
+  --news-overlay: linear-gradient(
+    55.1deg,
+    rgba(34, 63, 220, 0.7) -11.85%,
+    rgba(255, 23, 92, 0.7) 124.23%
+  );
+
+  // Demo Colot
+  --show-pagees-bg: #060f3a;
+  --demo-section-span: rgba(18, 19, 20, 0.03);
+}
+
+// data-theme colors
+[data-theme="dark"] {
+}
+
+// Font variable
+:root {
+  --text-12: 12px;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-16: 16px;
+  --text-17: 17px;
+  --text-18: 18px;
+  --text-19: 19px;
+  --text-20: 20px;
+  --text-24: 24px;
+  --text-30: 30px;
+  --text-48: 48px;
+  --text-90: 90px;
+}
+
+// Shadow variable
+:root {
+}
+
+// transition variable
+:root {
+  --ease-in: 0.3s ease-in;
+  --ease-in-out: 0.3s ease-in-out;
+}
+
+// :root {
+//   --container: 1575px;
+// }
+:root {
+  --container: 1400px;
+}
+
+// @media screen and (max-width: 1600px) {
+//   :root {
+//     --container: 1400px;
+//   }
+// }
+
+@media screen and (max-width: 1390px) {
+  :root {
+    --container: 1140px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  :root {
+    --container: 960px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --container: 720px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  :root {
+    --container: 540px;
+  }
+}

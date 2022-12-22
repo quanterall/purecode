@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Baloo Da 2";
+  src: url("../fonts/Baloo_Da_2/BalooDa2-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Baloo Da 2";
+  src: url("../fonts/Baloo_Da_2/BalooDa2-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Baloo Da 2";
+  src: url("../fonts/Baloo_Da_2/BalooDa2-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Baloo Da 2";
+  src: url("../fonts/Baloo_Da_2/BalooDa2-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+/*-------------------------------------------------------------------*/
+//1.main-style abstract file css call here
+//------------------------------
+@import "components/abstracts/variable";
+@import "components/abstracts/mixin";
+@import "components/abstracts/common";
+@import "components/base_components/button";
+@import "components/base_components/typography";
+
+// 2.all short-code file css call here
+//------------------------------
+@import "main-style/short-code/main-menu";
+
+//3 all section css call here
+// --------------------------
+@import "main-style/all-section/why-chose-v2";
+@import "main-style/all-section/section-title";
+@import "main-style/all-section/home-v1-hero";
+@import "main-style/all-section/home-v2-hero";
+@import "main-style/all-section/landing-page-v1-about";
+@import "main-style/all-section/landing-v2-hero";
+@import "main-style/all-section/section-title-v4";
+@import "main-style/all-section/landing-v2-about";
+@import "main-style/all-section/landing-v2-schedule";
+@import "main-style/all-section/landing-v2-speaker";
+@import "main-style/all-section/landing-v2-sponsor";
+
+//4.all-pages file css call here
+//------------------------------
+@import "main-style/pages/header/header-secondary";
+@import "main-style/pages/header/header-primary";
+@import "main-style/pages/header/header-general";
+@import "main-style/pages/header/header-transprent";
+@import "main-style/pages/footer/primary-footer";
+@import "main-style/pages/footer/secondary-footer";
+@import "main-style/pages/footer/footer-with-shape";
+@import "main-style/pages/footer/footer-with-bg";
+@import "main-style/pages/faq-v1";
+@import "main-style/pages/faq-v2";
+
+body {
+  overflow-x: hidden;
+}

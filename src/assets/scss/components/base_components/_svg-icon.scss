@@ -1,0 +1,10 @@
+svg {
+    max-height: 50px;
+    max-width: 50px;
+    path {
+        // fill: var(--heading);
+        &.svg-theme {
+            fill: var(--theme-color);
+        }
+    }
+}

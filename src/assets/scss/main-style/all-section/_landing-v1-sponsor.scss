@@ -1,0 +1,30 @@
+
+.landing-v1-sponsor {
+    .single-partner-slider {
+        max-width: 100%;
+        height: 110px;
+        border: 1px solid var(--gainsboro-bdr);
+        padding: 35px 40px;
+        transition: all .3s ease-in-out;
+        &:hover {
+            border-color: var(--font-clr-bdr);
+        }
+    }
+    .owl-dots {
+        .owl-dot {
+            &.active {
+                background: var(--gradient-secondary);
+            }
+        }
+    }
+}
+
+// Responsive 
+@media screen and (max-width: 575px){
+    .landing-v1-sponsor {
+        .single-partner-slider {
+            height: 100px;
+            padding: 26px 20px;
+        }
+    }
+}

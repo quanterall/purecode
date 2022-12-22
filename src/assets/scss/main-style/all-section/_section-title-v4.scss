@@ -1,0 +1,49 @@
+.section-title-v4 {
+  text-align: center;
+  margin-bottom: 100px;
+  h2 {
+    font-size: 5.375rem; //86px
+    // color: var(--white-txt);
+    // line-height: 1;
+    // font-weight: 900;
+  }
+  p {
+    // color: var(--sky-blue-txt);
+    font-family: "Baloo Da 2";
+    font-size: 1.25rem; //20px;
+    font-weight: 500;
+    // line-height: 1;
+    // margin-top: 5px;
+  }
+  //   img {
+  //     margin-top: 15px;
+  //     max-width: 70px;
+  //   }
+}
+
+// Responsive
+@media screen and (max-width: 767px) {
+  .section-title-v4 {
+    margin-bottom: 40px;
+    h2 {
+      font-size: 2.125rem; //34px;
+    }
+    p {
+      font-size: 1.125rem; //18px;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .section-title-v4 {
+    margin-bottom: 30px;
+    h1 {
+      font-size: 1.875rem; //30px;
+    }
+    p {
+      font-size: 1rem; //16px;
+    }
+    // img {
+    //   max-width: 50px;
+    // }
+  }
+}

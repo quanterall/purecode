@@ -1,0 +1,319 @@
+
+// .header-transprent {
+//     position: absolute;
+//     background-color: transparent;
+// }
+.header-transprent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    
+    .header-general-wrapper {
+        .logo {
+            a {
+                svg {
+                    .logo-color {
+                        fill: var(--white-txt);
+                    }
+                }
+            }
+        }
+        .header-wrap {
+            // Main Menu
+            .main-menu {
+                ul {
+                    li {
+                        &:hover {
+                            a {
+                                color: var(--white-txt);
+                                background: unset;
+                                -webkit-background-clip: unset;
+                                -webkit-text-fill-color: unset;
+
+                                i {
+                                    color: var(--white-txt);
+                                    background: unset;
+                                    -webkit-background-clip: unset;
+                                    -webkit-text-fill-color: unset;
+                                }
+                            }
+                        }
+                        a {
+                            color: var(--sky-blue-txt);
+                        }
+                        .sub-menu {
+                            background: var(--transprent-submenu-bg);
+                        }
+                    }
+                }
+            }
+        }
+        .header-search {
+            .search-button {
+                cursor: pointer;
+                i {
+                    color: var(--sky-blue-txt);
+                }
+            }
+        }
+        .book-ticket {
+            a {
+                background: var(--gradient-primary-btn);
+                background-size: 200%;
+                &:hover {
+                    background-position: right;
+                }
+            }
+        }
+        .hamburger {
+            .line {
+                stroke: var(--sky-blue-txt);
+            }
+        }
+
+        // MEga Menu 
+        .general-mega-menu {
+            background: var(--transprent-megamenu-bg);
+            .single-menu {
+                .title {
+                    h6 {
+                        color: var(--sky-blue-txt);
+                    }
+                }
+                .menu {
+                    ul {
+                        li {
+                            &:hover {
+                                a {
+                                    color: var(--sky-blue-txt);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // Search Popup
+        .general-search-popup {
+            background: var(--transprent-hdr-search-bg);
+            backdrop-filter: blur(40px);
+            .search-popup-close {
+                button {
+                    color: var(--white-txt);
+                }
+                &::before {
+                    background: var(--sky-blue-bg);
+                }
+            }
+            .search-popup-title {
+                span {
+                    color: var(--sky-blue-txt);
+                    background: unset;
+                    -webkit-background-clip: unset;
+                    -webkit-text-fill-color: unset;
+                }
+            }
+            .search-popup-input {
+                input {
+                    background: var(--white-bg);
+                    box-shadow: none;
+                    color: var(--font-clr-txt);
+                    border: unset;
+                }
+                button {
+                    color: var(--white-txt);
+                    background: var(--sky-blue-bg);
+                    background-size: unset;
+                }
+            }
+            .search-popup-list{
+                ul {
+                    li {
+                        &:hover {
+                            span {
+                                color: var(--sky-blue-txt);
+                                background: unset;
+                                -webkit-background-clip: unset;
+                                -webkit-text-fill-color: unset;
+                            }
+                            a {
+                                text-decoration-color: var(--sky-blue-txt);
+                            }
+                        }
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background: var(--sky-blue-bg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// White Logo Style Here
+.white-logo {
+    .logo {
+        a {
+            svg {
+                .logo-color {
+                    fill: var(--white-txt);
+                }
+            }
+        }
+    }
+} 
+
+// Responsive 
+@media screen and (max-width: 1350px){
+    .header-transprent {
+        .header-general-wrapper {
+            .header-wrap {
+                .main-menu {
+                    ul {
+                        li {
+                            &:hover {
+                                a {
+                                    color: var(--sky-blue-txt);
+                                }
+                            }
+                            .sub-menu {
+                                li {
+                                    a {
+                                        color: var(--white-txt);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .general-mega-menu {
+                .single-menu {
+                    .menu {
+                        ul {
+                            li {
+                                a {
+                                    color: var(--white-txt);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // White Logo Style Here
+    .white-logo {
+        .logo {
+            a {
+                svg {
+                    .logo-color {
+                        fill: var(--font-clr-txt);
+                    }
+                }
+            }
+        }
+    } 
+}
+@media screen and (max-width: 991px){
+    .header-transprent {
+        .header-general-wrapper {
+            .header-wrap {
+                .main-menu {
+                    ul {
+                        li {
+                            &:hover {
+                                a {
+                                    i {
+                                        color: var(--sky-blue-txt);
+                                    }
+                                }
+                            }
+                            a {
+                                color: var(--font-clr-txt);
+                                i {
+                                    color: var(--font-clr-txt);
+                                }
+                            }
+                            .sub-menu {
+                                background: transparent;
+                                backdrop-filter: unset;
+                                li {
+                                    a {
+                                        color: var(--font-clr-txt);
+                                        &:hover {
+                                            color: var(--sky-blue-txt);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .general-mega-menu {
+                background: transparent;
+                backdrop-filter: unset;
+                .single-menu {
+                    .title {
+                        h6 {
+                            color: var(--font-clr-txt);
+                        }
+                        &.active {
+                            h6 {
+                                i {
+                                    background: unset;
+                                    -webkit-background-clip: unset;
+                                    -webkit-text-fill-color: unset;
+                                    color: var(--sky-blue-txt);
+                                }
+                            }
+                        }
+                    }
+                    .menu {
+                        ul {
+                            li {
+                                &.active {
+                                    a {
+                                        i {
+                                            color: var(--sky-blue-txt);
+                                            background: unset;
+                                            -webkit-background-clip: unset;
+                                            -webkit-text-fill-color: unset;
+                                        }
+                                    }
+                                }
+                                a {
+                                    color: var(--font-clr-txt);
+                                    &:hover {
+                                        transform: translateX(0px);
+                                        background: unset;
+                                        -webkit-background-clip: unset;
+                                        -webkit-text-fill-color: unset;
+                                        color: var(--sky-blue-txt);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 575px){
+    .header-transprent {
+        .user-icon {
+            i {
+                color: var(--sky-blue-txt);
+            }
+        }
+        .header-account {
+            padding: 10px;
+            border-radius: 5px;
+        }
+    }
+}

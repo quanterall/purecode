@@ -1,0 +1,67 @@
+.landing-v2-sponsor-area {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  .section-title-v4 {
+    p {
+      font-family: "Baloo Da 2";
+      font-weight: 600;
+      font-size: 1.25rem; //20px;
+      color: var(--white-txt);
+      margin-bottom: 1.5em;
+    }
+  }
+  .button-group {
+    text-align: center;
+    p,
+    a.btn {
+      font-family: "Baloo Da 2";
+      font-weight: 500;
+      font-size: 1.25rem; //20px;
+    }
+    p {
+      color: var(--white-txt);
+      margin-bottom: 0.5em;
+    }
+    a.btn {
+      background: var(--sky-blue-bg);
+      border: none;
+      padding: 0.75em 3em 0.7em 3em;
+      &:hover,
+      &:focus {
+        background: var(--body-clr-txt);
+      }
+    }
+  }
+}
+
+// Responsive
+@media screen and (max-width: 991px) {
+  .landing-v2-sponsor-area {
+    .shape-01,
+    .shape-02 {
+      max-width: 200px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .landing-v2-sponsor-area {
+    .section-title-v4 {
+      img {
+        transform: scale(80%);
+      }
+    }
+    p,
+    a.btn {
+      font-size: 1.125rem; //18px;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .landing-v2-sponsor-area {
+    .shape-01,
+    .shape-02 {
+      max-width: 100px;
+    }
+  }
+}

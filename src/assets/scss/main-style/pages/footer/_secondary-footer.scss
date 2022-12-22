@@ -1,0 +1,43 @@
+
+.secondary-footer {
+    .footer-social {
+        ul {
+            li {
+                a {
+                    &::before {
+                        background: var(--gradient-primary);
+                    }
+                }
+            }
+        }
+    }
+    .footer-list {
+        li {
+            a {
+                &:hover {
+                    background: var(--gradient-primary);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+    .footer-items {
+        .footer-contact {
+            a {
+                i {
+                    background: var(--gradient-primary);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            .location {
+                a {
+                    background: var(--gradient-primary);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,411 @@
+.landing-v2-schedule-area {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  .section-title-v4 {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &::before {
+    content: url("../img/agenda/Joystick.png");
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    left: 5vw;
+  }
+}
+.landing-v2-schedule-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.landing-v2-schedule-tab-navs {
+  position: absolute;
+  top: 266px;
+  right: 0;
+  max-width: 735px;
+  background-color: var(--font-clr-txt);
+  transform: rotate(90deg);
+  .span-group-1,
+  .span-group-2 {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    span {
+      width: 15px;
+      height: 15px;
+      background: var(--white-txt);
+      margin: 5px 0px;
+      display: block;
+      border-radius: 50%;
+    }
+  }
+  .span-group-1 {
+    left: -7px;
+  }
+  .span-group-2 {
+    right: -7px;
+  }
+  .nav-tabs {
+    border-bottom: 0;
+    display: inline-flex;
+    counter-reset: section;
+    .nav-link {
+      border: none;
+      border-left: 1px dashed var(--sky-blue-bg) !important;
+      background: transparent !important;
+      font-family: "Baloo Da 2";
+      font-size: 2.5rem; //40px;
+      font-weight: 600;
+      line-height: 1;
+      color: #00c1c94d;
+      padding: 1.25em 0.5em;
+      position: relative;
+      box-shadow: none !important;
+      margin: 0px;
+      transition: all 0.4s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+      &:first-child {
+        border-left: none !important;
+      }
+      //   &::before {
+      //     position: absolute;
+      //     content: "";
+      //     counter-increment: section;
+      //     content: counter(section);
+      //     font-size: 150px;
+      //     font-weight: 900;
+      //     top: 50%;
+      //     left: 50%;
+      //     transform: translate(-50%, -50%);
+      //     color: #ffffff;
+      //     opacity: 0.07;
+      //     z-index: -1;
+      //   }
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 5px;
+        background: var(--sky-blue-bg);
+        bottom: 0;
+        left: 0;
+        transition: all 0.4s ease-in-out;
+        opacity: 0;
+      }
+      &.active {
+        color: var(--sky-blue-bg);
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.l-v2-sdule-cntnt-wrapper {
+  // max-width: 1280px;
+  // padding: 80px 0px;
+
+  max-width: 950px;
+  margin: 0 auto;
+  position: relative;
+  .line {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: calc(100% + 100px);
+    left: calc(50% - 22px);
+    top: 58%;
+    transform: translate(-50%, -50%);
+    background-color: var(--sky-blue-txt);
+    margin: 0;
+  }
+}
+
+.l-v2-sdule-cntnt-wrap {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  margin-bottom: 95px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.l-v2-sdule-content {
+  display: flex;
+  // align-items: center;
+  width: calc(55% - 70px);
+  .content {
+    flex: 1;
+    // padding: 35px 0px;
+    .date-time {
+      span {
+        color: #fdd55e;
+        font-size: 1rem;
+        // line-height: 1.3;
+        margin-right: 20px;
+        display: inline-block;
+      }
+    }
+    p {
+      //   color: var(--white-txt);
+      font-size: 0.875rem; //14px;
+      //   font-weight: 500;
+      //   line-height: 1.3;
+      //   margin-top: 10px;
+    }
+    h4 {
+      font-size: 2.5rem; //40px;
+      font-weight: 600;
+      //   color: var(--white-txt);
+      //   line-height: 1.3;
+      //   margin-top: 20px;
+    }
+    .content-button {
+      margin-top: 25px;
+      a {
+        border: none;
+      }
+    }
+  }
+}
+
+.l-v2-sdule-title {
+  width: calc(45% - 70px);
+  position: relative;
+  h4 {
+    // color: var(--sky-blue-txt);
+    font-size: 2.5rem; //40px;
+    max-width: 16ch;
+    // line-height: 1;
+  }
+  p {
+    // color: var(--white-txt);
+    // line-height: 1.4;
+    font-size: 0.875rem; //14px;
+    max-width: 45ch;
+    // max-width: 470px;
+    // margin-top: 10px;
+  }
+  ul {
+    margin-top: 15px;
+    li {
+      color: var(--white-txt);
+      display: flex;
+      align-items: center;
+      i {
+        color: var(--sky-blue-txt);
+        margin-right: 5px;
+      }
+    }
+  }
+  .dot-cercle {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: var(--sky-blue-txt);
+    border-radius: 50%;
+    left: calc(-145px - 7px);
+    top: 15px;
+    // transform: translateY(-50%);
+    &::before {
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(0, 193, 201, 0.2);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+// Responsive
+@media screen and (max-width: 1575px) {
+  .l-v2-sdule-cntnt-wrapper {
+    max-width: 1140px;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .l-v2-sdule-cntnt-wrapper {
+    max-width: 100%;
+  }
+  .landing-v2-schedule-tab-navs {
+    position: unset;
+    transform: rotate(0deg);
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .l-v2-sdule-cntnt-wrapper {
+    padding: 50px 0px 0px;
+  }
+  .l-v2-sdule-content {
+    width: calc(55% - 25px);
+    .number {
+      width: 100px;
+    }
+  }
+  .l-v2-sdule-title {
+    width: calc(45% - 25px);
+    .dot-cercle {
+      left: calc(-25px - 7px);
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .landing-v2-schedule-tab-navs {
+    max-width: 560px;
+    .nav-tabs {
+      .nav-link {
+        font-size: 24px;
+        padding: 40px 45px;
+        &::before {
+          font-size: 100px;
+        }
+      }
+    }
+  }
+
+  .l-v2-sdule-content {
+    width: 100%;
+    .number {
+      width: 150px;
+      .doller-img {
+        max-width: 130px;
+      }
+    }
+    .content {
+      flex: 1;
+      padding: 30px 0px 0px;
+    }
+  }
+  .l-v2-sdule-cntnt-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    .line {
+      display: none;
+    }
+  }
+  .l-v2-sdule-title {
+    width: 100%;
+    .dot-cercle {
+      display: none;
+    }
+  }
+  .l-v2-sdule-cntnt-wrap {
+    flex-direction: column-reverse;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 35px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .landing-v2-schedule-area {
+    &::before {
+      content: none;
+    }
+  }
+  .landing-v2-schedule-tab-navs {
+    max-width: 400px;
+    .nav-tabs {
+      .nav-link {
+        font-size: 16px;
+        line-height: 1;
+        padding: 30px 35px;
+        &::before {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+  .l-v2-sdule-cntnt-wrapper {
+    max-width: 550px;
+    margin: 0 auto;
+    .line {
+      display: none;
+    }
+  }
+
+  .l-v2-sdule-content {
+    width: 100%;
+    .number {
+      width: 70px;
+      .doller-img {
+        max-width: 70px;
+      }
+    }
+    .content {
+      .date-time {
+        span {
+          font-size: 14px;
+          margin-right: 15px;
+        }
+      }
+      p {
+        font-size: 20px;
+        margin-top: 5px;
+      }
+      h4 {
+        font-size: 24px;
+        margin-top: 10px;
+      }
+      .content-button {
+        margin-top: 15px;
+      }
+    }
+  }
+  .l-v2-sdule-title {
+    width: 100%;
+    .dot-cercle {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .landing-v2-schedule-tab-navs {
+    max-width: 325px;
+    .span-group-1,
+    .span-group-2 {
+      display: none;
+    }
+    .nav-tabs {
+      .nav-link {
+        font-size: 15px;
+        padding: 20px 25px;
+        &::after {
+          height: 2px;
+        }
+      }
+    }
+  }
+  .l-v2-sdule-cntnt-wrapper {
+    padding: 30px 0px 0px;
+  }
+  .l-v2-sdule-cntnt-wrap {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .l-v2-sdule-content {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+    .number {
+      .doller-img {
+        display: none;
+      }
+    }
+    .content {
+      padding: 0;
+    }
+  }
+}

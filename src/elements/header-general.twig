@@ -1,0 +1,52 @@
+<!-- Header Start Here -->
+<header class="header-area header-general {{class}}">
+    <div class="container">
+        <div class="header-wrapper header-general-wrapper">
+            <div class="logo">
+                <a href="/">
+                    <span>pure</span>:#<span class="bold">code</span>
+                    {# <img src="assets/img/logo/logo.svg" alt="logo"> #}
+                </a>
+            </div>
+            <div class="header-wrap ">
+                <!-- Menu Start -->
+                {% include "header/main-menu.twig" %}
+                <!-- Menu Start -->
+                <div class="header-right">
+                    {# <div class="header-search">
+                        <div class="search-button">
+                            <i class="icofont-search-1"></i>
+                        </div>
+                        <!-- Search Popup Area Start Here -->
+                        {% include "short-code/search-popup.twig" with {'class': 'general-search-popup'} %}
+                        <!-- Search Popup Area End Here -->
+                    </div> #}
+                    {# <div class="user-icon d-none">
+                        <i class="icofont-user-male"></i>
+                    </div> #}
+                    <div class="book-ticket header-account">
+                        <a class="btn btn-bg-g-secondary" href="https://purecode.eventbrite.com" target="_blank">REGISTER</a>
+                    </div>
+                    <div class="hamburger">
+                        <div class="plates">
+                            <!--  onclick="this.classList.toggle('active')" -->
+                            <div class="plate plate5">
+                              <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                                <path class="line line1" d="M 30,35 H 70 " />
+                                <path class="line line2" d="M 50,50 H 30 L 34,32" />
+                                <path class="line line3" d="M 50,50 H 70 L 66,68" />
+                                <path class="line line4" d="M 30,65 H 70 " />
+                              </svg>
+                              <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                                <path class="line" d="M 34,32 L 66,68" />
+                                <path class="line" d="M 66,32 L 34,68" />
+                              </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End Here -->
