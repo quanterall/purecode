@@ -83,11 +83,6 @@
       });
     },
 
-    // Nice Select
-    nice_select: function () {
-      $(".select-active").niceSelect();
-    },
-
     //============== IMG to SVG ==================
     imgToSvg: function () {
       function jetix_svg() {
@@ -155,7 +150,6 @@
       allfunction.counter_up();
       allfunction.countdown_clock();
       allfunction.accordion();
-      allfunction.nice_select();
       allfunction.aos_aimation();
 
       allfunction.stopPropagationElements();
