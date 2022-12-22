@@ -9,7 +9,7 @@ const sass = require("gulp-sass")(require("node-sass"));
 
 // Template engine twig
 function templateTask() {
-  return src("./src/*.twig").pipe(twig()).pipe(dest("dist"));
+  return src("./src/*.twig").pipe(twig()).pipe(dest("docs"));
 }
 
 // SCSS Styles
@@ -18,7 +18,7 @@ function styleTask() {
     .pipe(sourcemap.init())
     .pipe(sass({ outputStyle: "compressed" }))
     .pipe(sourcemap.write("."))
-    .pipe(dest("dist/assets/css"))
+    .pipe(dest("docs/assets/css"))
     .pipe(browsersync.stream());
 }
 
@@ -26,12 +26,12 @@ function styleTask() {
 function cssPluginTask() {
   return src("./src/assets/css/*.css")
     .pipe(concat("plugins.min.css"))
-    .pipe(dest("dist/assets/css"));
+    .pipe(dest("docs/assets/css"));
 }
 
 // Image asssets
 function imageTask() {
-  return src("./src/assets/img/**").pipe(dest("dist/assets/img"));
+  return src("./src/assets/img/**").pipe(dest("docs/assets/img"));
 }
 
 // js asssets
@@ -39,24 +39,24 @@ function jsPluginsTask() {
   return src(["./src/assets/js/**/*.js", "!src/assets/js/scripts.js"])
     .pipe(concat("app.min.js"))
     .pipe(uglify())
-    .pipe(dest("dist/assets/js"));
+    .pipe(dest("docs/assets/js"));
 }
 
 // Custom JS task
 function customJsTask() {
-  return src("src/assets/js/scripts.js").pipe(dest("dist/assets/js"));
+  return src("src/assets/js/scripts.js").pipe(dest("docs/assets/js"));
 }
 
 // Fonts file
 function custonFonts() {
-  return src("src/assets/fonts/**").pipe(dest("dist/assets/fonts"));
+  return src("src/assets/fonts/**").pipe(dest("docs/assets/fonts"));
 }
 
 // Live reload browsersync
 function browsersyncServe(cb) {
   browsersync.init({
     server: {
-      baseDir: "./dist",
+      baseDir: "./docs",
     },
   });
   cb();
