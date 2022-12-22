@@ -25,9 +25,9 @@
     display: flex;
     margin-top: 60px;
     .countdown-item {
-      flex: 0 0 150px;
+      flex: 0 0 135px;
       background-color: var(--white-bg);
-      padding: 1em 2em;
+      padding: 1em 0;
       text-align: center;
       margin-right: 20px;
       &:last-child {
