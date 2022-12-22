@@ -232,6 +232,9 @@
   .section-title-v4 {
     margin-bottom: 80px;
   }
+  #mlb2-5837220.ml-form-embedContainer .ml-form-embedWrapper {
+    background-color: unset !important;
+  }
   #mlb2-5837220.ml-form-embedContainer
     .ml-form-embedWrapper
     .ml-form-embedBody
@@ -339,6 +342,12 @@
       top: 50px;
       right: -15px;
       max-width: 90px;
+    }
+  }
+  .speakers-form {
+    &:before,
+    &:after {
+      content: none;
     }
   }
 }
