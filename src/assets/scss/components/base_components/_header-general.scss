@@ -1,0 +1,126 @@
+.header {
+  &-general {
+    background-color: var(--white-bg);
+    backdrop-filter: blur(50px);
+    position: relative;
+    z-index: 99999999;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo {
+        max-width: 240px;
+        margin-right: 70px;
+        a {
+          font-family: "Baloo Da 2";
+          color: var(--body-clr-txt);
+          font-size: 2.5625rem; //41px
+          line-height: 1;
+          span {
+            font-weight: normal;
+            color: var(--sky-blue-txt);
+          }
+          .bold {
+            font-weight: 700;
+            color: var(--body-clr-txt);
+          }
+        }
+      }
+    }
+  }
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    .main-menu {
+      ul {
+        li {
+          a {
+            &::before {
+              background: var(--primary-bg);
+            }
+          }
+        }
+      }
+    }
+    .header-right {
+      .btn {
+        padding: 12px 60px 10px;
+      }
+    }
+  }
+}
+
+// Responsive
+@media screen and (max-width: 1250px) {
+  .header {
+    &-general {
+      &-wrapper {
+        padding: 20px 0;
+      }
+    }
+    &-wrap {
+      .header-right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header-general {
+    &-wrapper {
+      .logo {
+        a {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  .hamburger {
+    width: 50px;
+    height: 50px;
+    svg {
+      max-height: 50px;
+      max-width: 50px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .hamburger {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hamburger {
+    width: 30px;
+  }
+  .header-account {
+    position: absolute;
+    padding: 15px;
+    background: var(--white-bg);
+    top: 100%;
+    right: 50px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: all 0.3s ease-in-out;
+    &.active {
+      clip-path: polygon(0 0, 200% 0, 200% 200%, 0 200%);
+    }
+    a {
+      display: block;
+    }
+    .login {
+      font-size: 16px;
+      color: var(--whisper-bdr);
+      margin-bottom: 10px;
+    }
+    .register {
+      margin-left: 0;
+    }
+  }
+}

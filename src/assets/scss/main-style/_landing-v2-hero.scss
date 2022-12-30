@@ -1,0 +1,145 @@
+.landing-v2-hero-area {
+  min-height: 85vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.landing-v2-hero-wrapper {
+  position: relative;
+}
+
+.landing-v2-hero-content {
+  padding: 120px 0px 150px;
+  .title {
+    position: relative;
+    z-index: 1;
+    h1 {
+      font-size: 5.375rem; //86px;
+      line-height: 0.975;
+      color: var(--white-txt);
+      margin-bottom: 15px;
+      span {
+        color: var(--sky-blue-txt);
+      }
+    }
+    .span-group {
+      span {
+        display: inline-block;
+        font-family: "Baloo Da 2";
+        font-size: 1.5625rem; //25px;
+        color: var(--white-txt);
+        padding: 0 0.6em 0 0;
+        &.span-border {
+          padding: 0 0 0 0.6em;
+          &::before {
+            display: inline-block;
+            content: "";
+            width: 2px;
+            height: 0.9em;
+            background: var(--white-bdr);
+            position: relative;
+            left: -0.6em;
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+  .button-group {
+    margin-top: 4.5em;
+    a {
+      font-family: "Baloo Da 2";
+      font-weight: 600;
+      font-size: 1.25rem; //20px;
+      background: var(--sky-blue-bg);
+      border: none;
+      padding: 0.75em 1.1em;
+      &:hover,
+      &:focus {
+        background: var(--body-clr-txt);
+      }
+    }
+  }
+}
+
+// Responsive
+@media screen and (max-width: 1350px) {
+  .landing-v2-hero-content {
+    .title {
+      h1 {
+        font-size: 4.6875rem; //75px;
+      }
+    }
+    .span-group {
+      span {
+        font-size: 1.4375rem; //25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .landing-v2-hero-content {
+    .title {
+      h1 {
+        font-size: 4.375rem; //70px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .landing-v2-hero-content {
+    .title .span-group {
+      span {
+        font-size: 1.25rem;
+        padding: 0 0.5em 0 0;
+        &.span-border {
+          padding: 0 0 0 0.5em;
+          &::before {
+            left: -0.5em;
+          }
+        }
+      }
+    }
+    .button-group {
+      margin-top: 3.25em;
+      a {
+        font-size: 1.125rem; //18px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .landing-v2-hero-content {
+    padding: 7vh 0px 10vh;
+    .title {
+      h1 {
+        font-size: 3.4375rem; //55px;
+      }
+      .span-group {
+        span {
+          display: block;
+          font-size: 1rem;
+          &.span-border {
+            padding: 0;
+            &::before {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  .landing-v2-hero-content {
+    .title {
+      h1 {
+        font-size: 3.25rem;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 .landing-v2-schedule-area {
+  min-height: 100vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -72,20 +73,6 @@
       &:first-child {
         border-left: none !important;
       }
-      //   &::before {
-      //     position: absolute;
-      //     content: "";
-      //     counter-increment: section;
-      //     content: counter(section);
-      //     font-size: 150px;
-      //     font-weight: 900;
-      //     top: 50%;
-      //     left: 50%;
-      //     transform: translate(-50%, -50%);
-      //     color: #ffffff;
-      //     opacity: 0.07;
-      //     z-index: -1;
-      //   }
       &::after {
         position: absolute;
         content: "";
@@ -108,9 +95,7 @@
 }
 
 .l-v2-sdule-cntnt-wrapper {
-  // max-width: 1280px;
-  // padding: 80px 0px;
-
+  min-height: 65vh;
   max-width: 950px;
   margin: 0 auto;
   position: relative;
@@ -130,7 +115,6 @@
 .l-v2-sdule-cntnt-wrap {
   display: flex;
   justify-content: space-between;
-  // align-items: center;
   margin-bottom: 95px;
   &:last-child {
     margin-bottom: 0;
@@ -139,33 +123,23 @@
 
 .l-v2-sdule-content {
   display: flex;
-  // align-items: center;
   width: calc(55% - 70px);
   .content {
     flex: 1;
-    // padding: 35px 0px;
     .date-time {
       span {
         color: #fdd55e;
         font-size: 1rem;
-        // line-height: 1.3;
         margin-right: 20px;
         display: inline-block;
       }
     }
     p {
-      //   color: var(--white-txt);
       font-size: 0.875rem; //14px;
-      //   font-weight: 500;
-      //   line-height: 1.3;
-      //   margin-top: 10px;
     }
     h4 {
       font-size: 2.5rem; //40px;
       font-weight: 600;
-      //   color: var(--white-txt);
-      //   line-height: 1.3;
-      //   margin-top: 20px;
     }
     .content-button {
       margin-top: 25px;
@@ -180,18 +154,12 @@
   width: calc(45% - 70px);
   position: relative;
   h4 {
-    // color: var(--sky-blue-txt);
     font-size: 2.5rem; //40px;
     max-width: 16ch;
-    // line-height: 1;
   }
   p {
-    // color: var(--white-txt);
-    // line-height: 1.4;
     font-size: 0.875rem; //14px;
     max-width: 45ch;
-    // max-width: 470px;
-    // margin-top: 10px;
   }
   ul {
     margin-top: 15px;
@@ -230,182 +198,252 @@
 }
 
 // Responsive
-@media screen and (max-width: 1575px) {
+@media screen and (max-width: 1760px) {
+  .landing-v2-schedule-area {
+    &::before {
+      transform: scale(0.9);
+      top: -30px;
+    }
+  }
   .l-v2-sdule-cntnt-wrapper {
-    max-width: 1140px;
+    max-width: 750px;
+    .line {
+      top: 57%;
+      left: calc(50% + 13px);
+    }
+  }
+  .l-v2-sdule-title {
+    .dot-cercle {
+      left: calc(-100px - 7px);
+    }
+  }
+}
+@media screen and (max-width: 1630px) {
+  .landing-v2-schedule-area {
+    &::before {
+      left: 3vw;
+    }
+  }
+}
+@media screen and (max-width: 1550px) {
+  .landing-v2-schedule-tab-navs {
+    right: -8vw;
   }
 }
 @media screen and (max-width: 1350px) {
+  .landing-v2-schedule-area {
+    &::before {
+      transform: scale(0.8);
+      top: -35px;
+      left: -1vw;
+    }
+  }
   .l-v2-sdule-cntnt-wrapper {
     max-width: 100%;
+    padding: 0 15vw;
   }
   .landing-v2-schedule-tab-navs {
     position: unset;
     transform: rotate(0deg);
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 80px;
+    .span-group-1,
+    .span-group-2 {
+      .hide-laptop {
+        display: none;
+      }
+    }
+    .nav-tabs {
+      width: 100%;
+      .nav-link {
+        display: block;
+        flex-direction: unset;
+        flex-grow: 1;
+        font-size: 1.75rem;
+      }
+    }
+  }
+  .l-v2-sdule-title {
+    .dot-cercle {
+      left: calc(-108px - 7px);
+    }
   }
 }
 @media screen and (max-width: 1199px) {
-  .l-v2-sdule-cntnt-wrapper {
-    padding: 50px 0px 0px;
-  }
-  .l-v2-sdule-content {
-    width: calc(55% - 25px);
-    .number {
-      width: 100px;
-    }
-  }
-  .l-v2-sdule-title {
-    width: calc(45% - 25px);
-    .dot-cercle {
-      left: calc(-25px - 7px);
-    }
-  }
-}
-@media screen and (max-width: 991px) {
-  .landing-v2-schedule-tab-navs {
-    max-width: 560px;
-    .nav-tabs {
-      .nav-link {
-        font-size: 24px;
-        padding: 40px 45px;
-        &::before {
-          font-size: 100px;
-        }
-      }
-    }
-  }
-
-  .l-v2-sdule-content {
-    width: 100%;
-    .number {
-      width: 150px;
-      .doller-img {
-        max-width: 130px;
-      }
-    }
-    .content {
-      flex: 1;
-      padding: 30px 0px 0px;
-    }
-  }
-  .l-v2-sdule-cntnt-wrapper {
-    max-width: 700px;
-    margin: 0 auto;
-    .line {
-      display: none;
-    }
-  }
-  .l-v2-sdule-title {
-    width: 100%;
-    .dot-cercle {
-      display: none;
-    }
-  }
-  .l-v2-sdule-cntnt-wrap {
-    flex-direction: column-reverse;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 35px;
-  }
-}
-@media screen and (max-width: 767px) {
   .landing-v2-schedule-area {
     &::before {
       content: none;
     }
-  }
-  .landing-v2-schedule-tab-navs {
-    max-width: 400px;
-    .nav-tabs {
-      .nav-link {
-        font-size: 16px;
-        line-height: 1;
-        padding: 30px 35px;
-        &::before {
-          font-size: 50px;
-        }
-      }
+    .section-title-v4 {
+      max-width: 750px;
     }
   }
   .l-v2-sdule-cntnt-wrapper {
-    max-width: 550px;
-    margin: 0 auto;
     .line {
-      display: none;
+      left: calc(50% + 10px);
+    }
+  }
+  .l-v2-sdule-content {
+    width: calc(50% - 25px);
+    .content {
+      h4 {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  .l-v2-sdule-title {
+    width: calc(45% - 25px);
+    .dot-cercle {
+      left: calc(-60px - 9px);
+    }
+
+    h4 {
+      font-size: 1.75rem;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .landing-v2-schedule-area {
+    background: #f7f6f3;
+    background-image: unset !important;
+  }
+
+  .landing-v2-schedule-tab-navs {
+    .span-group-1,
+    .span-group-2 {
+      span {
+        background: #f7f6f3;
+      }
+    }
+    // max-width: 560px;
+    .nav-tabs {
+      .nav-link {
+        font-size: 1.5rem; //24px;
+        padding: 1.5em 0.5em;
+      }
     }
   }
 
   .l-v2-sdule-content {
     width: 100%;
-    .number {
-      width: 70px;
-      .doller-img {
-        max-width: 70px;
-      }
-    }
-    .content {
-      .date-time {
-        span {
-          font-size: 14px;
-          margin-right: 15px;
-        }
-      }
-      p {
-        font-size: 20px;
-        margin-top: 5px;
-      }
-      h4 {
-        font-size: 24px;
-        margin-top: 10px;
-      }
-      .content-button {
-        margin-top: 15px;
-      }
+    margin-bottom: 1em;
+  }
+  .l-v2-sdule-cntnt-wrapper {
+    margin-bottom: 7em;
+    .line {
+      top: 50%;
+      left: 50%;
+      z-index: 1;
     }
   }
   .l-v2-sdule-title {
     width: 100%;
     .dot-cercle {
-      display: none;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    h4 {
+      max-width: none;
+      margin-bottom: 0.5em;
+      font-size: 1.5rem;
+    }
+    p {
+      margin: 0 auto;
+      max-width: 90%;
+    }
+  }
+  .l-v2-sdule-cntnt-wrap {
+    position: relative;
+    top: 5em;
+    background: #f7f6f3;
+    flex-direction: column;
+    padding-top: 2em;
+    padding-bottom: 3em;
+    text-align: center;
+    z-index: 10;
+  }
+}
+@media screen and (max-width: 767px) {
+  .landing-v2-schedule-area .section-title-v4 {
+    margin: 0 5vw 30px;
+  }
+  .landing-v2-schedule-tab-navs {
+    margin: 0 5vw 50px;
+    .nav-tabs {
+      .nav-link {
+        font-size: 1.25rem;
+        padding: 1.25em 0.5em;
+      }
+    }
+  }
+  .l-v2-sdule-cntnt-wrapper {
+    min-height: unset;
+    .line {
+      width: 1px;
+      height: 100%;
+    }
+  }
+  .l-v2-sdule-cntnt-wrap {
+    top: 3em;
+    margin-bottom: 3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .l-v2-sdule-title {
+    .dot-cercle {
+      top: -140px;
+      width: 15px;
+      height: 15px;
+      &:before {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 }
 
 @media screen and (max-width: 575px) {
   .landing-v2-schedule-tab-navs {
-    max-width: 325px;
+    margin-bottom: 30px;
     .span-group-1,
     .span-group-2 {
       display: none;
     }
     .nav-tabs {
       .nav-link {
-        font-size: 15px;
-        padding: 20px 25px;
+        font-size: 1rem;
         &::after {
           height: 2px;
         }
       }
     }
   }
-  .l-v2-sdule-cntnt-wrapper {
-    padding: 30px 0px 0px;
-  }
-  .l-v2-sdule-cntnt-wrap {
-    padding: 20px;
-    margin-bottom: 20px;
-  }
   .l-v2-sdule-content {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 30px;
-    .number {
-      .doller-img {
-        display: none;
+    .content {
+      h4 {
+        font-size: 1.5rem;
       }
     }
-    .content {
-      padding: 0;
+  }
+  .l-v2-sdule-cntnt-wrapper {
+    padding: 0 5vw;
+  }
+  .l-v2-sdule-cntnt-wrap {
+    top: 2.5em;
+    margin-bottom: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+  }
+  .l-v2-sdule-title {
+    .dot-cercle {
+      top: -130px;
+    }
+    h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.25em;
     }
   }
 }

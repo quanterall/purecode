@@ -54,37 +54,26 @@
 @import "components/abstracts/common";
 @import "components/base_components/button";
 @import "components/base_components/typography";
-
-// 2.all short-code file css call here
-//------------------------------
-@import "main-style/short-code/main-menu";
+@import "components/base_components/header-general";
+@import "components/base_components/main-menu";
 
 //3 all section css call here
 // --------------------------
-@import "main-style/all-section/why-chose-v2";
-@import "main-style/all-section/section-title";
-@import "main-style/all-section/home-v1-hero";
-@import "main-style/all-section/home-v2-hero";
-@import "main-style/all-section/landing-page-v1-about";
-@import "main-style/all-section/landing-v2-hero";
-@import "main-style/all-section/section-title-v4";
-@import "main-style/all-section/landing-v2-about";
-@import "main-style/all-section/landing-v2-schedule";
-@import "main-style/all-section/landing-v2-speaker";
-@import "main-style/all-section/landing-v2-sponsor";
-
-//4.all-pages file css call here
-//------------------------------
-@import "main-style/pages/header/header-secondary";
-@import "main-style/pages/header/header-primary";
-@import "main-style/pages/header/header-general";
-@import "main-style/pages/header/header-transprent";
-@import "main-style/pages/footer/primary-footer";
-@import "main-style/pages/footer/secondary-footer";
-@import "main-style/pages/footer/footer-with-shape";
-@import "main-style/pages/footer/footer-with-bg";
-@import "main-style/pages/faq-v1";
-@import "main-style/pages/faq-v2";
+@import "main-style/section-title-v4";
+@import "main-style/why-chose-v2";
+@import "main-style/landing-v2-hero";
+@import "main-style/hero-countdown-clock";
+@import "main-style/landing-page-v1-about";
+@import "main-style/landing-v2-about";
+@import "main-style/landing-v2-schedule";
+@import "main-style/landing-v2-speaker";
+@import "main-style/landing-v2-sponsor";
+@import "main-style/faq-v1";
+@import "main-style/faq-v2";
+@import "main-style/footer/primary-footer";
+@import "main-style/footer/secondary-footer";
+@import "main-style/footer/footer-with-shape";
+@import "main-style/footer/footer-with-bg";
 
 body {
   overflow-x: hidden;

@@ -1,0 +1,79 @@
+.countdown-clock {
+  display: flex;
+  margin-top: 60px;
+  .countdown-item {
+    flex: 0 0 135px;
+    border: 1px solid var(--whisper-bdr);
+    padding: 1em 0;
+    text-align: center;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+    .ci-inner {
+      font-size: 2.9375rem; //47px;
+      font-weight: bold;
+      color: var(--white-txt);
+      line-height: 1;
+    }
+    h4 {
+      font-size: 1.25rem; //20px;
+      font-weight: 400;
+      line-height: 1;
+      color: var(--white-txt);
+      margin-top: 0.5em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 991px) {
+  .countdown-clock {
+    margin-top: 50px;
+    .countdown-item {
+      flex: 0 0 120px;
+      .ci-inner {
+        font-size: 2rem; //32px;
+      }
+      h4 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .countdown-clock {
+    margin-top: 2em;
+    .countdown-item {
+      flex: 1 0 20%;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .countdown-clock {
+    .countdown-item {
+      padding: 10px;
+      margin-right: 2vw;
+      .ci-inner {
+        font-size: 1.5rem; //24px;
+      }
+      h4 {
+        font-size: 0.9375rem; //15px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  .countdown-clock {
+    .countdown-item {
+      .ci-inner {
+        font-size: 1.25rem;
+      }
+      h4 {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

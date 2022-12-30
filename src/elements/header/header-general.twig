@@ -1,29 +1,18 @@
 <!-- Header Start Here -->
-<header class="header-area header-general {{class}}">
+<header class="header-general {{class}}">
     <div class="container">
-        <div class="header-wrapper header-general-wrapper">
-            <div class="logo">
+        <div class="header-general-wrapper">
+            <section class="logo">
                 <a href="/">
                     <span>pure</span>:#<span class="bold">code</span>
                     {# <img src="assets/img/logo/logo.svg" alt="logo"> #}
                 </a>
-            </div>
-            <div class="header-wrap ">
+            </section>
+            <section class="header-wrap ">
                 <!-- Menu Start -->
-                {% include "header/main-menu.twig" %}
+                {% include "/main-menu.twig" %}
                 <!-- Menu Start -->
                 <div class="header-right">
-                    {# <div class="header-search">
-                        <div class="search-button">
-                            <i class="icofont-search-1"></i>
-                        </div>
-                        <!-- Search Popup Area Start Here -->
-                        {% include "short-code/search-popup.twig" with {'class': 'general-search-popup'} %}
-                        <!-- Search Popup Area End Here -->
-                    </div> #}
-                    {# <div class="user-icon d-none">
-                        <i class="icofont-user-male"></i>
-                    </div> #}
                     <div class="book-ticket header-account">
                         <a class="btn btn-bg-g-secondary" href="https://purecode.eventbrite.com" target="_blank">REGISTER</a>
                     </div>
@@ -45,7 +34,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
 </header>
