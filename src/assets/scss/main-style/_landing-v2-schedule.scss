@@ -105,7 +105,7 @@
     width: 2px;
     height: calc(100% + 100px);
     left: calc(50% - 22px);
-    top: 58%;
+    top: 56%;
     transform: translate(-50%, -50%);
     background-color: var(--sky-blue-txt);
     margin: 0;
@@ -135,7 +135,7 @@
       }
     }
     p {
-      font-size: 0.875rem; //14px;
+      font-size: 1rem;
     }
     h4 {
       font-size: 2.5rem; //40px;
@@ -158,7 +158,7 @@
     max-width: 16ch;
   }
   p {
-    font-size: 0.875rem; //14px;
+    font-size: 1rem;
     max-width: 45ch;
   }
   ul {
