@@ -1,8 +1,8 @@
 .landing-v2-schedule-area {
   min-height: 100vh;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-size: 100%;
+  // background-position: center center;
+  background-repeat: repeat-y;
   position: relative;
   .section-title-v4 {
     max-width: 950px;
@@ -20,139 +20,117 @@
 .landing-v2-schedule-wrapper {
   position: relative;
   overflow: hidden;
-}
-.landing-v2-schedule-tab-navs {
-  position: absolute;
-  top: 266px;
-  right: 0;
-  max-width: 735px;
-  background-color: var(--font-clr-txt);
-  transform: rotate(90deg);
-  .span-group-1,
-  .span-group-2 {
-    position: absolute;
-    content: "";
-    top: 50%;
-    transform: translateY(-50%);
-    span {
-      width: 15px;
-      height: 15px;
-      background: var(--white-txt);
-      margin: 5px 0px;
-      display: block;
-      border-radius: 50%;
-    }
-  }
-  .span-group-1 {
-    left: -7px;
-  }
-  .span-group-2 {
-    right: -7px;
-  }
-  .nav-tabs {
-    border-bottom: 0;
-    display: inline-flex;
-    counter-reset: section;
-    .nav-link {
-      border: none;
-      border-left: 1px dashed var(--sky-blue-bg) !important;
-      background: transparent !important;
-      font-family: "Baloo Da 2";
-      font-size: 2.5rem; //40px;
-      font-weight: 600;
-      line-height: 1;
-      color: #00c1c94d;
-      padding: 1.25em 0.5em;
-      position: relative;
-      box-shadow: none !important;
-      margin: 0px;
-      transition: all 0.4s ease-in-out;
-      display: flex;
-      flex-direction: column;
-      z-index: 1;
-      &:first-child {
-        border-left: none !important;
-      }
-      &::after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 5px;
-        background: var(--sky-blue-bg);
-        bottom: 0;
-        left: 0;
-        transition: all 0.4s ease-in-out;
-        opacity: 0;
-      }
-      &.active {
-        color: var(--sky-blue-bg);
-        &::after {
-          opacity: 1;
-        }
-      }
+
+  .tab-pane {
+    max-width: 950px;
+    margin: 0 auto;
+
+    h3 {
+      text-align: center;
+      color: var(--sky-blue-txt);
+      font-size: 2.5rem;
+      margin-bottom: 1.25em;
     }
   }
 }
 
 .l-v2-sdule-cntnt-wrapper {
-  min-height: 65vh;
-  max-width: 950px;
-  margin: 0 auto;
   position: relative;
-  .line {
-    position: absolute;
-    content: "";
-    width: 2px;
-    height: calc(100% + 100px);
-    left: calc(50% - 22px);
-    top: 56%;
-    transform: translate(-50%, -50%);
-    background-color: var(--sky-blue-txt);
-    margin: 0;
-  }
 }
 
 .l-v2-sdule-cntnt-wrap {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 95px;
+  margin-bottom: 80px;
+  position: relative;
+
+  .line {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: calc(100% + 90px);
+    // height: 200%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+    background-color: var(--sky-blue-txt);
+    margin: 0;
+  }
+  .dot-cercle {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: var(--sky-blue-txt);
+    border-radius: 50%;
+    // left: calc(-145px - 7px);
+    left: 50%;
+    top: 15px;
+    transform: translateX(-50%);
+    &::before {
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(0, 193, 201, 0.5);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &:first-child {
+    .line {
+      top: 15px;
+    }
+    // margin-bottom: 0;
+  }
   &:last-child {
-    margin-bottom: 0;
+    .line {
+      height: 100%;
+    }
+    margin-bottom: 100px;
   }
 }
 
 .l-v2-sdule-content {
   display: flex;
   width: calc(55% - 70px);
+  padding-right: 3rem;
   .content {
     flex: 1;
     .date-time {
       span {
-        color: #fdd55e;
-        font-size: 1rem;
-        margin-right: 20px;
-        display: inline-block;
+        font-family: "Baloo Da 2";
+        font-size: 1.25rem;
+        font-weight: 500;
+        // color: #fdd55e;
+        // margin-right: 20px;
+        // display: inline-block;
       }
     }
-    p {
-      font-size: 1rem;
+    h4 ~ p {
+      font-family: "Baloo Da 2";
+      font-size: 1.25rem;
+      font-weight: 500;
     }
     h4 {
       font-size: 2.5rem; //40px;
       font-weight: 600;
     }
-    .content-button {
-      margin-top: 25px;
-      a {
-        border: none;
+    &-bio {
+      margin-top: 1rem;
+      p {
+        // font-weight: 500;
+        margin-bottom: 0.5em;
       }
     }
   }
 }
 
 .l-v2-sdule-title {
-  width: calc(45% - 70px);
-  position: relative;
+  width: calc(55% - 70px);
+  padding-left: 3rem;
   h4 {
     font-size: 2.5rem; //40px;
     max-width: 16ch;
@@ -173,28 +151,6 @@
       }
     }
   }
-  .dot-cercle {
-    position: absolute;
-    content: "";
-    width: 25px;
-    height: 25px;
-    background-color: var(--sky-blue-txt);
-    border-radius: 50%;
-    left: calc(-145px - 7px);
-    top: 15px;
-    // transform: translateY(-50%);
-    &::before {
-      position: absolute;
-      content: "";
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: rgba(0, 193, 201, 0.2);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
 }
 
 // Responsive
@@ -205,18 +161,6 @@
       top: -30px;
     }
   }
-  .l-v2-sdule-cntnt-wrapper {
-    max-width: 750px;
-    .line {
-      top: 57%;
-      left: calc(50% + 13px);
-    }
-  }
-  .l-v2-sdule-title {
-    .dot-cercle {
-      left: calc(-100px - 7px);
-    }
-  }
 }
 @media screen and (max-width: 1630px) {
   .landing-v2-schedule-area {
@@ -225,48 +169,12 @@
     }
   }
 }
-@media screen and (max-width: 1550px) {
-  .landing-v2-schedule-tab-navs {
-    right: -8vw;
-  }
-}
 @media screen and (max-width: 1350px) {
   .landing-v2-schedule-area {
     &::before {
       transform: scale(0.8);
       top: -35px;
       left: -1vw;
-    }
-  }
-  .l-v2-sdule-cntnt-wrapper {
-    max-width: 100%;
-    padding: 0 15vw;
-  }
-  .landing-v2-schedule-tab-navs {
-    position: unset;
-    transform: rotate(0deg);
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 80px;
-    .span-group-1,
-    .span-group-2 {
-      .hide-laptop {
-        display: none;
-      }
-    }
-    .nav-tabs {
-      width: 100%;
-      .nav-link {
-        display: block;
-        flex-direction: unset;
-        flex-grow: 1;
-        font-size: 1.75rem;
-      }
-    }
-  }
-  .l-v2-sdule-title {
-    .dot-cercle {
-      left: calc(-108px - 7px);
     }
   }
 }
@@ -279,72 +187,56 @@
       max-width: 750px;
     }
   }
-  .l-v2-sdule-cntnt-wrapper {
-    .line {
-      left: calc(50% + 10px);
+  .landing-v2-schedule-wrapper {
+    .tab-pane {
+      max-width: 750px;
+      h3 {
+        font-size: 2rem;
+      }
     }
   }
-  .l-v2-sdule-content {
-    width: calc(50% - 25px);
-    .content {
-      h4 {
+  .l-v2-sdule-content .content h4,
+  .l-v2-sdule-title h4 {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .landing-v2-schedule-wrapper {
+    .tab-pane {
+      h3 {
         font-size: 1.75rem;
       }
     }
   }
-
-  .l-v2-sdule-title {
-    width: calc(45% - 25px);
-    .dot-cercle {
-      left: calc(-60px - 9px);
-    }
-
-    h4 {
-      font-size: 1.75rem;
-    }
-  }
-}
-@media screen and (max-width: 991px) {
-  .landing-v2-schedule-area {
-    background: #f7f6f3;
-    background-image: unset !important;
-  }
-
-  .landing-v2-schedule-tab-navs {
-    .span-group-1,
-    .span-group-2 {
-      span {
-        background: #f7f6f3;
+  .l-v2-sdule-cntnt-wrap {
+    &,
+    &:last-child {
+      flex-direction: column;
+      text-align: center;
+      // z-index: 10;
+      padding-top: 70px;
+      margin-bottom: 30px;
+      .line {
+        height: 90px;
+        top: -20px;
       }
     }
-    // max-width: 560px;
-    .nav-tabs {
-      .nav-link {
-        font-size: 1.5rem; //24px;
-        padding: 1.5em 0.5em;
+    &:first-child {
+      padding-top: 90px;
+      .line {
+        height: 70px;
       }
     }
   }
-
   .l-v2-sdule-content {
     width: 100%;
     margin-bottom: 1em;
-  }
-  .l-v2-sdule-cntnt-wrapper {
-    margin-bottom: 7em;
-    .line {
-      top: 50%;
-      left: 50%;
-      z-index: 1;
-    }
+    padding-right: 0;
   }
   .l-v2-sdule-title {
+    padding-left: 0;
     width: 100%;
-    .dot-cercle {
-      top: -200px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+
     h4 {
       max-width: none;
       margin-bottom: 0.5em;
@@ -353,96 +245,67 @@
     p {
       margin: 0 auto;
       max-width: 90%;
+      font-size: 0.875rem; //14px
     }
-  }
-  .l-v2-sdule-cntnt-wrap {
-    position: relative;
-    top: 5em;
-    background: #f7f6f3;
-    flex-direction: column;
-    padding-top: 2em;
-    padding-bottom: 3em;
-    text-align: center;
-    z-index: 10;
   }
 }
 @media screen and (max-width: 767px) {
   .landing-v2-schedule-area .section-title-v4 {
     margin: 0 5vw 30px;
   }
-  .landing-v2-schedule-tab-navs {
-    margin: 0 5vw 50px;
-    .nav-tabs {
-      .nav-link {
-        font-size: 1.25rem;
-        padding: 1.25em 0.5em;
-      }
-    }
-  }
   .l-v2-sdule-cntnt-wrapper {
     min-height: unset;
-    .line {
-      width: 1px;
-      height: 100%;
-    }
   }
-  .l-v2-sdule-cntnt-wrap {
-    top: 3em;
-    margin-bottom: 3em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-  }
-  .l-v2-sdule-title {
-    .dot-cercle {
-      top: -140px;
-      width: 15px;
-      height: 15px;
-      &:before {
-        width: 30px;
-        height: 30px;
+  .l-v2-sdule-content {
+    .content {
+      &-bio {
+        p {
+          margin: 0 auto;
+          max-width: 90%;
+          font-size: 0.875rem; //14px
+        }
       }
     }
   }
 }
 
 @media screen and (max-width: 575px) {
-  .landing-v2-schedule-tab-navs {
-    margin-bottom: 30px;
-    .span-group-1,
-    .span-group-2 {
-      display: none;
-    }
-    .nav-tabs {
-      .nav-link {
-        font-size: 1rem;
-        &::after {
-          height: 2px;
-        }
-      }
-    }
-  }
-  .l-v2-sdule-content {
-    .content {
-      h4 {
-        font-size: 1.5rem;
-      }
-    }
+  .l-v2-sdule-content .content h4,
+  .l-v2-sdule-title h4 {
+    font-size: 1.5rem;
   }
   .l-v2-sdule-cntnt-wrapper {
     padding: 0 5vw;
   }
   .l-v2-sdule-cntnt-wrap {
-    top: 2.5em;
-    margin-bottom: 3em;
-    padding-top: 0.5em;
-    padding-bottom: 1em;
+    .dot-cercle {
+      width: 20px;
+      height: 20px;
+      top: 25px;
+      &::before {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    &,
+    &:last-child {
+      .line {
+        height: 80px;
+        top: -15px;
+      }
+    }
+    &:first-child {
+      .line {
+        height: 50px;
+        top: 25px;
+      }
+    }
+  }
+  .l-v2-sdule-content .content h4 ~ p {
+    font-size: 1.15rem;
   }
   .l-v2-sdule-title {
-    .dot-cercle {
-      top: -130px;
-    }
     h4 {
-      font-size: 1.25rem;
       margin-bottom: 0.25em;
     }
   }
