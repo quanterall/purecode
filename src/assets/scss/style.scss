@@ -24,6 +24,12 @@
 }
 @font-face {
   font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
   src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
@@ -66,16 +72,13 @@
 //3 all section css call here
 // --------------------------
 @import "main-style/section-title-v4";
-@import "main-style/why-chose-v2";
 @import "main-style/landing-v2-hero";
 @import "main-style/hero-countdown-clock";
-@import "main-style/landing-page-v1-about";
-@import "main-style/landing-v2-about";
-@import "main-style/landing-v2-schedule";
+@import "main-style/about-section";
 @import "main-style/landing-v2-speaker";
+@import "main-style/landing-v2-schedule";
 @import "main-style/landing-v2-sponsor";
-@import "main-style/faq-v1";
-@import "main-style/faq-v2";
+@import "main-style/faq-section";
 @import "main-style/footer/primary-footer";
 
 body {
