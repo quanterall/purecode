@@ -1,16 +1,19 @@
+.primary-footer-area {
+  color: var(--white-txt);
+  background-color: var(--body-clr-txt);
+}
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
-  color: var(--white-txt);
 }
 .footer-logo {
-  flex: 0 0 30%;
+  flex: 0 0 25%;
   display: flex;
   flex-direction: column;
   .logo {
     a {
       font-family: "Baloo Da 2";
-      font-size: 2.5625rem; //41px
+      font-size: 2.3125rem; //37px
       line-height: 1;
       color: var(--white-txt);
       span {
@@ -23,33 +26,55 @@
       }
     }
   }
+  h2 {
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin-top: 0.5em;
+  }
   h2,
-  h4,
   p {
     color: var(--white-txt);
     margin-top: 10px;
   }
-  h4 {
-    font-weight: 500;
+  p {
+    font-family: "Baloo Da 2";
+    font-size: 1.25rem;
   }
   .organizer {
     margin-top: auto;
-    padding-top: 4em;
+    padding-top: 6em;
     color: var(--white-txt);
+    span {
+      display: inline-block;
+      font-family: "Baloo Da 2";
+      margin-bottom: 5px;
+    }
     a img {
-      max-width: 200px;
+      display: block;
+      max-width: 210px;
     }
   }
 }
 .footer-contacts {
-  display: flex;
+  // display: flex;
+  color: var(--white-txt);
+  font-size: 1.25rem; //20px;
+  font-family: "Baloo Da 2";
+  h4,
+  a {
+    color: inherit;
+  }
+  .addresses {
+    margin-top: 1.25em;
+  }
 }
 .footer-list {
-  margin-bottom: 20px;
+  margin-bottom: 1.25em;
   li {
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
     &:first-child {
-      margin-bottom: 10px;
+      // margin-bottom: 5px;
+      font-weight: 600;
     }
     a {
       display: inline-flex;
@@ -65,224 +90,149 @@
     }
   }
 }
-.footer-title {
-  color: var(--white-txt);
-  font-size: 20px;
-  margin-bottom: 20px;
+.social-icon-link {
+  &::after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+  &.github {
+    &::after {
+      content: url("../img/footer/social-media-icons/icon-github.svg");
+    }
+  }
+  &.twitter {
+    &::after {
+      content: url("../img/footer/social-media-icons/icon-twitter.svg");
+    }
+  }
+  &.linkedin {
+    &::after {
+      content: url("../img/footer/social-media-icons/icon-linkedin.svg");
+    }
+  }
+  &.facebook {
+    &::after {
+      content: url("../img/footer/social-media-icons/icon-facebook.svg");
+    }
+  }
+  &.youtube {
+    &::after {
+      content: url("../img/footer/social-media-icons/icon-youtube.svg");
+    }
+  }
+  &.instagram {
+    &::after {
+      content: url("../img/footer/social-media-icons/icon-instagram.svg");
+    }
+  }
+  &.reddit {
+    &::after {
+      content: url("../img/footer/social-media-icons/icon-reddit.svg");
+    }
+  }
 }
 .footer-social {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  span {
-    color: var(--white-txt);
-    font-size: 16px;
-    font-weight: 500;
-    margin-right: 25px;
-    display: block;
+  flex: 0 0 25%;
+  p {
+    font-family: "Baloo Da 2";
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
   }
   ul {
+    display: flex;
+    justify-content: space-between;
     li {
       display: inline-block;
       a {
         display: block;
         width: 34px;
         height: 34px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid var(--white-bdr);
-        border-radius: 50%;
-        font-size: 16px;
-        color: var(--white-txt);
+        border: 1px solid var(--sky-blue-txt);
+        border-radius: 8px;
         transition: all 0.3s ease-in-out;
         position: relative;
-        z-index: 1;
-        margin-right: 20px;
-
-        &::before {
-          position: absolute;
-          content: "";
-          width: 100%;
-          height: 100%;
-          background: var(--gradient-secondary);
-          border-radius: 50%;
-          z-index: -1;
-          top: 0;
-          left: 0;
-          clip-path: circle(0% at 50% 0);
-          transition: all 0.4s ease-in-out;
-        }
-        &:hover {
+        &:hover,
+        &:focus {
+          outline: none;
           border-color: transparent;
-          &::before {
-            clip-path: circle(100% at 50% 0);
-          }
         }
       }
     }
   }
 }
-.footer-items {
-  flex: 0 0 30%;
-  display: flex;
-  justify-content: space-between;
-  //   .footer-contact {
-  //     a {
-  //       display: flex;
-  //       align-items: center;
-  //       color: var(--white-txt);
-  //       font-size: 16px;
-  //       font-weight: 400;
-  //       margin-bottom: 15px;
-  //       line-height: 1;
-  //       i {
-  //         background: var(--gradient-secondary);
-  //         -webkit-background-clip: text;
-  //         -webkit-text-fill-color: transparent;
-  //         display: block;
-  //         font-size: 24px;
-  //         margin-right: 10px;
-  //         line-height: 1;
-  //       }
-  //     }
-  //     .location {
-  //       margin-top: 35px;
-  //       h4 {
-  //         margin-bottom: 15px;
-  //       }
-  //       a {
-  //         font-size: 16px;
-  //         font-weight: 500;
-  //         background: var(--gradient-secondary);
-  //         -webkit-background-clip: text;
-  //         -webkit-text-fill-color: transparent;
-  //         display: flex;
-  //         align-items: center;
-  //         line-height: 1;
-  //         margin: 0;
-  //       }
-  //     }
-  //   }
-  //   .footer-link {
-  //     white-space: nowrap;
-  //   }
-}
-
-// Copy Right
-.copyright {
-  // background-color: var(--snow-bg);
-  text-align: center;
-  padding: 1.25em 0;
-  p {
-    font-size: 1rem;
-    line-height: 1;
-    font-weight: 400;
-    // color: var(--body-clr-txt);
-  }
-}
 
 // Responsive
-@media screen and (max-width: 1350px) {
-  .footer-wrapper {
-    grid-template-columns: 1fr 1fr;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .footer-logo {
-    margin-right: 20px;
-  }
-  .footer-items {
-    order: 2;
-  }
-  .footer-sitemap {
-    margin-top: 50px;
-    order: 3;
+@media screen and (max-width: 1199px) {
+  .footer-social ul {
+    flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .footer-wrapper {
-    grid-template-columns: 1fr;
-    max-width: 500px;
+    flex-direction: column;
+    max-width: 650px;
     margin: 0 auto;
   }
-  .footer-sitemap {
-    margin-top: 40px;
-  }
-  .footer-items {
-    margin-top: 40px;
-  }
   .footer-logo {
-    .logo {
-      max-width: 180px;
+    margin-bottom: 3em;
+    .organizer {
+      margin-top: 1em;
+      padding-top: 0;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .footer-contacts {
+    order: 2;
+  }
+  .footer-social {
+    margin-bottom: 3em;
+    ul {
+      max-width: 75%;
     }
   }
 }
 @media screen and (max-width: 575px) {
   .footer-wrapper {
-    max-width: 400px;
+    // max-width: 400px;
   }
   .footer-logo {
-    .logo {
-      max-width: 150px;
+    h2 {
+      font-size: 2rem;
     }
     p {
-      font-size: 15px;
-      margin: 15px 0px;
+      font-size: 0.9rem;
     }
   }
-  .footer-sitemap {
-    margin-top: 30px;
-    .menu {
-      .single-menu {
-        margin-right: 10px;
-      }
-    }
-  }
-  .footer-items {
-    margin-top: 30px;
-    flex-direction: column;
-    .footer-contact {
-      a {
-        font-size: 15px;
-        margin-bottom: 10px;
-        i {
-          font-size: 20px;
-        }
-      }
-    }
-    .footer-link {
-      margin-top: 30px;
-    }
-  }
+
   .footer-social {
-    span {
-      margin-right: 15px;
-    }
     ul {
-      li {
-        a {
-          width: 30px;
-          height: 30px;
-          font-size: 14px;
-          margin-right: 10px;
-        }
-      }
+      max-width: none;
     }
   }
-  .footer-list {
-    li {
-      margin-bottom: 10px;
-      a {
-        font-size: 15px;
-      }
+  .footer-contacts {
+    font-size: 1rem;
+    h4 {
+      font-size: 1.25rem;
+    }
+    .addresses {
+      margin-top: 1.25em;
     }
   }
   // Copy Right
-  .copyright {
-    p {
-      font-size: 15px;
-      line-height: 1;
-    }
-  }
+  // .copyright {
+  //   p {
+  //     font-size: 15px;
+  //     line-height: 1;
+  //   }
+  // }
 }
