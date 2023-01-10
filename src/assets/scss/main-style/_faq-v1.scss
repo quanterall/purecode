@@ -4,6 +4,15 @@
   .section-title-v4 {
     margin-bottom: 75px;
   }
+
+  a {
+    color: var(--sky-blue-txt);
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
 }
 
 .faq-v1-wrapper {
