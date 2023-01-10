@@ -183,6 +183,19 @@
       left: 3vw;
     }
   }
+  .landing-v2-schedule-wrapper {
+    &::before,
+    &::after {
+      transform: scale(0.7);
+    }
+    &::before {
+      bottom: -131px;
+    }
+    &::after {
+      right: 50px;
+      bottom: 125px;
+    }
+  }
 }
 @media screen and (max-width: 1350px) {
   .landing-v2-schedule-area {
@@ -216,11 +229,19 @@
   }
 }
 @media screen and (max-width: 991px) {
+  .landing-v2-schedule-area {
+    padding-top: 70px;
+  }
   .landing-v2-schedule-wrapper {
+    padding-bottom: 70px;
     .tab-pane {
       h3 {
         font-size: 1.75rem;
       }
+    }
+    &::before,
+    &::after {
+      content: none;
     }
   }
   .l-v2-sdule-cntnt-wrap {
