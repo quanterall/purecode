@@ -13,9 +13,10 @@
   &::before {
     content: url("../img/speakers/ComputerHeadGuy.png");
     position: absolute;
-    bottom: -7px;
-    right: 5vw;
+    bottom: -52px;
+    right: -80px;
     z-index: 0;
+    transform: scale(0.8);
   }
 }
 
@@ -99,179 +100,51 @@
   }
 }
 
-.speakers-form {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
-  &:before {
-    content: url("../img/speakers/EricssonMobile.png");
-    position: absolute;
-    bottom: -8px;
-    left: 15vw;
-    z-index: 0;
-  }
-  &:after {
-    content: url("../img/speakers/Heart-message.png");
-    position: absolute;
-    bottom: 380px;
-    left: calc(15vw + 70px);
-    z-index: 0;
-  }
-  .section-title-v4 {
-    margin-bottom: 80px;
-  }
-  #mlb2-5837220.ml-form-embedContainer .ml-form-embedWrapper {
-    background-color: unset !important;
-  }
-  #mlb2-5837220.ml-form-embedContainer
-    .ml-form-embedWrapper
-    .ml-form-embedBody
-    .ml-form-embedContent,
-  #mlb2-5837220.ml-form-embedContainer
-    .ml-form-embedWrapper
-    .ml-form-successBody
-    .ml-form-successContent {
-    margin: 0 !important;
-  }
-  #mlb2-5837220.ml-form-embedContainer
-    .ml-form-embedWrapper
-    .ml-form-embedBody
-    .ml-form-embedContent
-    p,
-  #mlb2-5837220.ml-form-embedContainer
-    .ml-form-embedWrapper
-    .ml-form-successBody
-    .ml-form-successContent
-    p {
-    display: none;
-  }
-
-  #mlb2-5837220.ml-form-embedContainer
-    .ml-form-embedWrapper
-    .ml-form-embedBody
-    .ml-form-fieldRow
-    input,
-  #mlb2-5837220.ml-form-embedContainer
-    .ml-form-embedWrapper
-    .ml-form-embedBody
-    .ml-form-fieldRow
-    textarea,
-  #mlb2-5837220.ml-form-embedContainer
-    .ml-form-embedWrapper
-    .ml-form-embedBody
-    .ml-form-horizontalRow
-    textarea {
-    border-radius: 10px !important;
-    font-size: 12px !important;
-  }
-  #mlb2-5837220.ml-form-embedContainer
-    .ml-form-embedWrapper
-    .ml-form-embedBody
-    .ml-form-embedSubmit
-    button {
-    background-color: #00c1c9 !important;
-    transition: background-color 0.3s ease-in-out;
-    font-family: "Baloo Da 2", sans-serif !important;
-    font-size: 20px !important;
-    padding: 15px 25px 14px 25px !important;
-    width: auto !important;
-    border-radius: 10px !important;
-    &:hover,
-    &:focus {
-      background-color: #245359 !important;
-    }
-  }
-}
-
 // Responsive
-@media screen and (max-width: 1440px) {
-  .speakers-form {
-    &:before {
-      left: 6vw;
-    }
-    &:after {
-      left: calc(5vw + 70px);
-    }
-  }
-}
-@media screen and (max-width: 1299px) {
-  .speakers-form {
-    &:before,
-    &:after {
-      content: none;
-    }
-  }
+
+@media screen and (min-width: 1950px) {
   .landing-v2-speaker-area {
     &::before {
-      transform: scale(80%);
-      right: -7vw;
-      bottom: -52px;
+      transform: scale(1);
+      right: 0;
+      bottom: -7px;
+    }
+  }
+}
+@media screen and (max-width: 1499px) {
+  .landing-v2-speaker-area {
+    &::before {
+      transform: scale(0.5);
+      right: -140px;
+      bottom: -120px;
     }
   }
 }
 @media screen and (max-width: 991px) {
-  .landing-v2-speaker-wrapper {
-    // grid-template-columns: 1fr 1fr;
-    grid-gap: 60px;
-    // padding: 0px 30px;
-  }
-}
-
-@media screen and (max-width: 767px) {
   .landing-v2-speaker-area {
-    .shape-01 {
-      max-width: 100px;
-    }
-    .shape-02 {
-      top: 5%;
-    }
     &::before {
       content: none;
     }
   }
   .landing-v2-speaker-wrapper {
+    grid-gap: 6vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .landing-v2-speaker-wrapper {
     padding: 0px 20px;
   }
   .landing-v2-speaker-title {
-    // margin-top: 15px;
     h6 {
       font-size: 1.125rem; //18px;
     }
   }
-  .landing-v2-speaker-thumb {
-    .shape-2 {
-      top: 50px;
-      right: -15px;
-      max-width: 90px;
-    }
-  }
-  .speakers-form {
-    &:before,
-    &:after {
-      content: none;
-    }
-  }
 }
 @media screen and (max-width: 575px) {
-  .landing-v2-speaker-area {
-    .shape-04 {
-      display: none;
-    }
-  }
   .landing-v2-speaker-wrapper {
     grid-template-columns: 1fr 1fr;
     padding: 0;
-    grid-gap: 30px;
-  }
-  .speakers-form {
-    .section-title-v4 {
-      margin-bottom: 30px;
-    }
-  }
-  #mlb2-5837220.ml-form-embedContainer
-    .ml-form-embedWrapper
-    .ml-form-embedBody.ml-form-embedBodyHorizontal {
-    padding: 0 !important;
+    grid-gap: 8vw;
   }
 }
