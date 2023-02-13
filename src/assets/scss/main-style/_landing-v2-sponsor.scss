@@ -10,6 +10,24 @@
       color: var(--white-txt);
       margin-bottom: 1.5em;
     }
+    &:nth-child(2) {
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      p {
+        margin-bottom: 0;
+      }
+      img {
+        max-width: 200px;
+        margin-right: 2em;
+        &:first-of-type {
+          margin-top: 15px;
+          filter: contrast(0) brightness(2);
+        }
+      }
+    }
   }
   .button-group {
     text-align: center;
