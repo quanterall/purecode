@@ -17,15 +17,15 @@
         justify-content: center;
       }
       p {
-        margin-bottom: 0;
+        margin-bottom: 0.5em;
       }
       img {
         max-width: 200px;
         margin-right: 2em;
-        &:first-of-type {
-          margin-top: 15px;
-          filter: contrast(0) brightness(2);
-        }
+      }
+      a:first-of-type img {
+        margin-top: 15px;
+        filter: contrast(0) brightness(2);
       }
     }
   }
