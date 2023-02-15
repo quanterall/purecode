@@ -21,11 +21,14 @@
       }
       img {
         max-width: 200px;
-        margin-right: 2em;
+        margin-right: 3em;
       }
-      a:first-of-type img {
-        margin-top: 15px;
-        filter: contrast(0) brightness(2);
+      a:first-of-type,
+      a:last-of-type {
+        img {
+          margin-top: 15px;
+          filter: contrast(0) brightness(2);
+        }
       }
     }
   }
@@ -67,6 +70,23 @@
     .section-title-v4 {
       img {
         transform: scale(80%);
+      }
+      &:nth-child(2) {
+        div {
+          flex-direction: column;
+        }
+        img {
+          margin-right: 0;
+        }
+        a:first-of-type img {
+          margin-bottom: 2em;
+        }
+        a:first-of-type,
+        a:last-of-type {
+          img {
+            margin-top: 0;
+          }
+        }
       }
     }
     p,
