@@ -26,12 +26,12 @@
       }
       a:first-of-type,
       a:nth-child(3),
-      a:nth-child(4) {
+      a:last-of-type {
         img {
           margin-top: 15px;
         }
       }
-      a:nth-child(4) {
+      a:last-of-type {
         img {
           max-width: 160px;
           margin-right: 0;
@@ -95,7 +95,7 @@
         }
         a:first-of-type,
         a:nth-child(3),
-        a:nth-child(4) {
+        a:last-of-type {
           img {
             margin-top: 0;
           }
