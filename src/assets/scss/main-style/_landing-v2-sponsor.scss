@@ -22,12 +22,19 @@
       img {
         max-width: 200px;
         margin-right: 3em;
+        filter: contrast(0) brightness(2);
       }
       a:first-of-type,
-      a:last-of-type {
+      a:nth-child(3),
+      a:nth-child(4) {
         img {
           margin-top: 15px;
-          filter: contrast(0) brightness(2);
+        }
+      }
+      a:nth-child(4) {
+        img {
+          max-width: 160px;
+          margin-right: 0;
         }
       }
     }
@@ -63,6 +70,11 @@
     .shape-02 {
       max-width: 200px;
     }
+    .section-title-v4:nth-child(2) {
+      div {
+        flex-wrap: wrap;
+      }
+    }
   }
 }
 @media screen and (max-width: 767px) {
@@ -82,7 +94,8 @@
           margin-bottom: 2em;
         }
         a:first-of-type,
-        a:last-of-type {
+        a:nth-child(3),
+        a:nth-child(4) {
           img {
             margin-top: 0;
           }
