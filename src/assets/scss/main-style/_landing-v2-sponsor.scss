@@ -20,20 +20,25 @@
         margin-bottom: 0.5em;
       }
       img {
-        max-width: 200px;
+        max-width: 180px;
         margin-right: 3em;
         filter: contrast(0) brightness(2);
       }
       a:first-of-type,
       a:nth-child(3),
+      a:nth-child(4),
       a:last-of-type {
         img {
           margin-top: 15px;
         }
       }
-      a:last-of-type {
+      a:nth-child(4) {
         img {
           max-width: 160px;
+        }
+      }
+      a:last-of-type {
+        img {
           margin-right: 0;
         }
       }
@@ -64,7 +69,7 @@
 }
 
 // Responsive
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1111px) {
   .landing-v2-sponsor-area {
     .shape-01,
     .shape-02 {
@@ -89,15 +94,21 @@
         }
         img {
           margin-right: 0;
+          max-width: 200px;
         }
         a:first-of-type img {
           margin-bottom: 2em;
         }
         a:first-of-type,
         a:nth-child(3),
-        a:last-of-type {
+        a:nth-child(4) {
           img {
             margin-top: 0;
+          }
+        }
+        a:last-child {
+          img {
+            margin-top: 30px;
           }
         }
       }
