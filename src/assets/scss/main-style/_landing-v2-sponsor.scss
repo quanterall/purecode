@@ -24,6 +24,11 @@
         margin-right: 3em;
         filter: contrast(0) brightness(2);
       }
+      a:last-of-type {
+        img {
+          filter: none;
+        }
+      }
       a:first-of-type,
       a:nth-child(3),
       a:nth-child(4),
