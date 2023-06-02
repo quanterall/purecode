@@ -92,7 +92,7 @@
   }
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 1800px) {
   .agenda-grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
